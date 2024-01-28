@@ -3,11 +3,16 @@
  * @type {import('next').NextConfig}
  */
 
+const path = require('path');
+
 const nextConfig = {
   reactStrictMode: true,
   basePath: '',
   output: 'export',
   images: { unoptimized: true },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
   env: {
     basePath: '',
     // NEXT_PUBLIC_FIREBASE_API_KEY: 'AIzaSyAYytnWLc4vB2glt1X8tWz27gpgclDvrls',

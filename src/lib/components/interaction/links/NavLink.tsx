@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-import styles from './NavLink.module.css';
+import styles from './NavLink.module.scss';
 
 interface INavLinkProps {
   className?: string;

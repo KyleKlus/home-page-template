@@ -4,14 +4,15 @@ import { Providers } from '@/app/components/Providers'
 import { Fira_Code } from "next/font/google";
 
 const firaCode = Fira_Code({ weight: '400', subsets: ['latin'] });
-import './globals.css';
+import './globals.scss';
+import './theme-config.scss';
+import '@radix-ui/themes/styles.css';
 
 export const metadata: Metadata = {
   title: 'Kyle Klus | Website',
   description: 'Website of Kyle Klus.',
   manifest: '/manifest.webmanifest'
 }
-
 
 export const viewport: Viewport = {
   themeColor: 'black',
@@ -25,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={[firaCode.className].join(' ')}>
         <Providers>
           {children}

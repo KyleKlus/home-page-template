@@ -1,5 +1,5 @@
 /** @format */
-import styles from './Main.module.css';
+import styles from './Main.module.scss';
 
 interface IMainProps { }
 

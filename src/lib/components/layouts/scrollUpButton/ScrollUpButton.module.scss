@@ -1,0 +1,35 @@
+@import '@/app/variables.module.scss';
+
+.scrollUpButton {
+  $width: 42px;
+
+  position: fixed;
+  z-index: 22;
+  width: var($width);
+  right: var($width);
+  bottom: var($width);
+  box-shadow: $shadow-5;
+
+  opacity: 0;
+  transform: translateY(calc(2 * var($width)));
+  transition: background 200ms ease, transform 400ms ease, opacity 1200ms ease;
+
+
+  &.isVisible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {}
+
+@media (prefers-reduced-motion) {}
+
+/* Mobile */
+@media (max-width: 700px) {}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {}
+
+@media (prefers-color-scheme: dark) {}

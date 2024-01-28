@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import scrollStyles from './ScrollNavLink.module.css';
-import navStyles from './NavLink.module.css';
+import scrollStyles from './ScrollNavLink.module.scss';
+import navStyles from './NavLink.module.scss';
 
 interface INavLinkProps {
   className?: string;

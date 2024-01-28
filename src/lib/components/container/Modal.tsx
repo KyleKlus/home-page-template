@@ -1,5 +1,5 @@
 /** @format */
-import styles from './Modal.module.css';
+import styles from './Modal.module.scss';
 import closeIcon from '@/lib/assets/close.png';
 import Image from 'next/image';
 

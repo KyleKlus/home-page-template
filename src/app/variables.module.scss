@@ -1,0 +1,132 @@
+// Layout
+$max-page-width: 1100px;
+
+$header-height: 64px;
+$footer-height: 144px;
+$sideNav-width: 300px;
+
+// Fonts
+$font-interface: 'Fira Code';
+$font-text: 'Fira Code';
+$font-mono: 'Fira Code',
+    ui-monospace,
+    Menlo,
+    Monaco,
+    'Cascadia Mono',
+    'Segoe UI Mono',
+    'Roboto Mono',
+    'Oxygen Mono',
+    'Ubuntu Monospace',
+    'Source Code Pro',
+    'Fira Mono',
+    'Droid Sans Mono',
+    'Courier New',
+    monospace;
+
+// Roundedness
+$rounded-sm: 4px;
+$rounded-md: 8px;
+$rounded-lg: 32px;
+$rounded-full: 50%;
+
+// Colors
+$shadow-0: 0 0.9px 1.4px hsla(0, 0%, 0%, 0.12);
+$shadow-1: 0 1.2px 1.9px hsla(0, 0%, 0%, 0.12);
+$shadow-2: 0 1.9px 2.6px hsla(0, 0%, 0%, 0.12);
+$shadow-3: 0 2px 4px hsla(0, 0%, 0%, 0.12);
+$shadow-4: 0 3px 6px hsla(0, 0%, 0%, 0.12);
+$shadow-5: 0 4px 8px hsla(0, 0%, 0%, 0.12);
+
+$interaction-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.3);
+$interaction-shadow-hover: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
+
+$filter-brightness: 1;
+$filter-blur: 5px;
+
+$accent-h: 7;
+$accent-s: 59%;
+$accent-l: 45%;
+$accent-l-offset: 15%;
+$accent-l-multiplier: -1;
+
+$color-white: hsl(180, 3%, 98%);
+$color-black: hsl(180, 3%, 5%);
+
+$accent-00: hsl($accent-h,
+        $accent-s,
+        calc($accent-l + $accent-l-offset * -1 * $accent-l-multiplier));
+$accent-10: hsl($accent-h,
+        $accent-s,
+        calc($accent-l + 0%));
+$accent-20: hsl($accent-h,
+        $accent-s,
+        calc($accent-l + $accent-l-offset * $accent-l-multiplier));
+
+$base-h: 180;
+$base-s: 3%;
+$base-l: 98%;
+$base-multiplier: -1;
+
+$base-00: hsl($base-h,
+        $base-s,
+        calc($base-l + calc(0% * $base-multiplier)));
+
+$base-05: hsl($base-h,
+        $base-s,
+        calc($base-l + calc(3% * $base-multiplier)));
+
+$base-translucent-05: hsla($base-h,
+        $base-s,
+        calc($base-l + calc(3% * $base-multiplier)), 0.8);
+
+$base-10: hsl($base-h,
+        $base-s,
+        calc($base-l + calc(5% * $base-multiplier)));
+
+$base-translucent-10: hsla($base-h,
+        $base-s,
+        calc($base-l + calc(5% * $base-multiplier)), 0.8);
+
+$base-15: hsl($base-h,
+        $base-s,
+        calc($base-l + calc(7% * $base-multiplier)));
+
+$base-translucent-15: hsla($base-h,
+        $base-s,
+        calc($base-l + calc(7% * $base-multiplier)), 0.8);
+
+$base-20: hsl($base-h,
+        $base-s,
+        calc($base-l + calc(9% * $base-multiplier)));
+
+$base-25: hsl($base-h,
+        $base-s,
+        calc($base-l + calc(11% * $base-multiplier)));
+
+$base-30: hsl($base-h,
+        $base-s,
+        calc($base-l + calc(13% * $base-multiplier)));
+
+$base-40: hsl($base-h,
+        $base-s,
+        calc($base-l + calc(18% * $base-multiplier)));
+
+$base-50: hsl($base-h,
+        $base-s,
+        calc($base-l + calc(25% * $base-multiplier)));
+
+$base-60: hsl($base-h,
+        $base-s,
+        calc($base-l + calc(30% * $base-multiplier)));
+
+$base-70: hsl($base-h,
+        $base-s,
+        calc($base-l + calc(40% * $base-multiplier)));
+
+$base-80: hsl($base-h,
+        $base-s,
+        calc($base-l + calc(70% * $base-multiplier)));
+
+$base-90: hsl($base-h,
+        $base-s,
+        calc($base-l + calc(95% * $base-multiplier)));
