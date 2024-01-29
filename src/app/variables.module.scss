@@ -1,5 +1,5 @@
 // Layout
-$max-page-width: 1100px;
+$max-content-width: 1100px;
 
 $header-height: 64px;
 $footer-height: 144px;
@@ -9,19 +9,19 @@ $sideNav-width: 300px;
 $font-interface: 'Fira Code';
 $font-text: 'Fira Code';
 $font-mono: 'Fira Code',
-    ui-monospace,
-    Menlo,
-    Monaco,
-    'Cascadia Mono',
-    'Segoe UI Mono',
-    'Roboto Mono',
-    'Oxygen Mono',
-    'Ubuntu Monospace',
-    'Source Code Pro',
-    'Fira Mono',
-    'Droid Sans Mono',
-    'Courier New',
-    monospace;
+        ui-monospace,
+        Menlo,
+        Monaco,
+        'Cascadia Mono',
+        'Segoe UI Mono',
+        'Roboto Mono',
+        'Oxygen Mono',
+        'Ubuntu Monospace',
+        'Source Code Pro',
+        'Fira Mono',
+        'Droid Sans Mono',
+        'Courier New',
+        monospace;
 
 // Roundedness
 $rounded-sm: 4px;
@@ -29,7 +29,7 @@ $rounded-md: 8px;
 $rounded-lg: 32px;
 $rounded-full: 50%;
 
-// Colors
+// Shadows
 $shadow-0: 0 0.9px 1.4px hsla(0, 0%, 0%, 0.12);
 $shadow-1: 0 1.2px 1.9px hsla(0, 0%, 0%, 0.12);
 $shadow-2: 0 1.9px 2.6px hsla(0, 0%, 0%, 0.12);
@@ -37,96 +37,118 @@ $shadow-3: 0 2px 4px hsla(0, 0%, 0%, 0.12);
 $shadow-4: 0 3px 6px hsla(0, 0%, 0%, 0.12);
 $shadow-5: 0 4px 8px hsla(0, 0%, 0%, 0.12);
 
-$interaction-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.3);
-$interaction-shadow-hover: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
+$interaction-shadow: 2px 2px 1px 0px hsla(0, 0%, 0%, 0.3);
+$interaction-shadow-hover: 2px 2px 1px 0px hsla(0, 0%, 0%, 0.4);
 
 $filter-brightness: 1;
 $filter-blur: 5px;
 
+// Colors
 $accent-h: 7;
 $accent-s: 59%;
-$accent-l: 45%;
-$accent-l-offset: 15%;
-$accent-l-multiplier: -1;
 
-$color-white: hsl(180, 3%, 98%);
-$color-black: hsl(180, 3%, 5%);
+// -> Accent
+$accent-1: hsl($accent-h, $accent-s, 99%); // Backgrounds
+$accent-2: hsl($accent-h, $accent-s, 98%); // Backgrounds
+$accent-3: hsl($accent-h, $accent-s, 96%); // Interactive
+$accent-4: hsl($accent-h, $accent-s, 93%); // Interactive
+$accent-5: hsl($accent-h, $accent-s, 90%); // Interactive
+$accent-6: hsl($accent-h, $accent-s, 87%); // Borders & separators
+$accent-7: hsl($accent-h, $accent-s, 81%); // Borders & separators
+$accent-8: hsl($accent-h, $accent-s, 74%); // Borders & separators
+$accent-9: hsl($accent-h, $accent-s, 59%); // Solid
+$accent-10: hsl($accent-h, $accent-s, 55%); // Solid
+$accent-11: hsl($accent-h, $accent-s, 49%); // Accessible text
+$accent-12: hsl($accent-h, $accent-s, 24%); // Accessible text
 
-$accent-00: hsl($accent-h,
-        $accent-s,
-        calc($accent-l + $accent-l-offset * -1 * $accent-l-multiplier));
-$accent-10: hsl($accent-h,
-        $accent-s,
-        calc($accent-l + 0%));
-$accent-20: hsl($accent-h,
-        $accent-s,
-        calc($accent-l + $accent-l-offset * $accent-l-multiplier));
+$accent-bg-1: $accent-1;
+$accent-bg-2: $accent-2;
 
-$base-h: 180;
-$base-s: 3%;
-$base-l: 98%;
-$base-multiplier: -1;
+$accent-interactive-1: $accent-3;
+$accent-interactive-2: $accent-4;
+$accent-interactive-3: $accent-5;
 
-$base-00: hsl($base-h,
-        $base-s,
-        calc($base-l + calc(0% * $base-multiplier)));
+$accent-sep-1: $accent-6;
+$accent-sep-2: $accent-7;
+$accent-sep-3: $accent-8;
 
-$base-05: hsl($base-h,
-        $base-s,
-        calc($base-l + calc(3% * $base-multiplier)));
+$accent-solid-1: $accent-9;
+$accent-solid-2: $accent-10;
 
-$base-translucent-05: hsla($base-h,
-        $base-s,
-        calc($base-l + calc(3% * $base-multiplier)), 0.8);
+$accent-text-1: $accent-11;
+$accent-text-2: $accent-12;
 
-$base-10: hsl($base-h,
-        $base-s,
-        calc($base-l + calc(5% * $base-multiplier)));
+// -> Base
+$base-1: hsl(150, 33%, 98%); // Backgrounds
+$base-2: hsl(150, 14%, 97%); // Backgrounds
+$base-3: hsl(160, 10%, 94%); // Interactive
+$base-4: hsl(160, 6%, 91%); // Interactive
+$base-5: hsl(140, 5%, 88%); // Interactive
+$base-6: hsl(160, 4%, 85%); // Borders & separators
+$base-7: hsl(150, 4%, 80%); // Borders & separators
+$base-8: hsl(150, 3%, 73%); // Borders & separators
+$base-9: hsl(158, 3%, 54%); // Solid
+$base-10: hsl(158, 3%, 50%); // Solid
+$base-11: hsl(160, 3%, 38%); // Accessible text
+$base-12: hsl(156, 12%, 12%); // Accessible text
 
-$base-translucent-10: hsla($base-h,
-        $base-s,
-        calc($base-l + calc(5% * $base-multiplier)), 0.8);
+$white: hsl(150, 33%, 98%);
+$gray: hsl(160, 3%, 38%);
+$black: hsl(156, 12%, 12%);
 
-$base-15: hsl($base-h,
-        $base-s,
-        calc($base-l + calc(7% * $base-multiplier)));
+$base-bg-1: $base-1;
+$base-bg-2: $base-2;
 
-$base-translucent-15: hsla($base-h,
-        $base-s,
-        calc($base-l + calc(7% * $base-multiplier)), 0.8);
+$base-interactive-1: $base-3;
+$base-interactive-2: $base-4;
+$base-interactive-3: $base-5;
 
-$base-20: hsl($base-h,
-        $base-s,
-        calc($base-l + calc(9% * $base-multiplier)));
+$base-sep-1: $base-6;
+$base-sep-2: $base-7;
+$base-sep-3: $base-8;
 
-$base-25: hsl($base-h,
-        $base-s,
-        calc($base-l + calc(11% * $base-multiplier)));
+$base-solid-1: $base-9;
+$base-solid-2: $base-10;
 
-$base-30: hsl($base-h,
-        $base-s,
-        calc($base-l + calc(13% * $base-multiplier)));
+$base-text-1: $base-11;
+$base-text-2: $base-12;
 
-$base-40: hsl($base-h,
-        $base-s,
-        calc($base-l + calc(18% * $base-multiplier)));
+html[class='dark'] {
+        // Shadows
+        $shadow-0: 0 0.9px 1.4px hsla(0, 0%, 100%, 0.12);
+        $shadow-1: 0 1.2px 1.9px hsla(0, 0%, 100%, 0.12);
+        $shadow-2: 0 1.9px 2.6px hsla(0, 0%, 100%, 0.12);
+        $shadow-3: 0 2px 4px hsla(0, 0%, 100%, 0.12);
+        $shadow-4: 0 3px 6px hsla(0, 0%, 100%, 0.12);
+        $shadow-5: 0 4px 8px hsla(0, 0%, 100%, 0.12);
 
-$base-50: hsl($base-h,
-        $base-s,
-        calc($base-l + calc(25% * $base-multiplier)));
+        $interaction-shadow: 2px 2px 1px 0px hsla(0, 0%, 100%, 0.3);
+        $interaction-shadow-hover: 2px 2px 1px 0px hsla(0, 0%, 100%, 0.4);
 
-$base-60: hsl($base-h,
-        $base-s,
-        calc($base-l + calc(30% * $base-multiplier)));
+        // Accent
+        $accent-1: hsl($accent-h, $accent-s, 8%); // Backgrounds
+        $accent-2: hsl($accent-h, $accent-s, 10%); // Backgrounds
+        $accent-3: hsl($accent-h, $accent-s, 15%); // Interactive
+        $accent-4: hsl($accent-h, $accent-s, 19%); // Interactive
+        $accent-5: hsl($accent-h, $accent-s, 23%); // Interactive
+        $accent-6: hsl($accent-h, $accent-s, 29%); // Borders & separators
+        $accent-7: hsl($accent-h, $accent-s, 37%); // Borders & separators
+        $accent-8: hsl($accent-h, $accent-s, 49%); // Borders & separators
+        $accent-9: hsl($accent-h, $accent-s, 59%); // Solid
+        $accent-10: hsl($accent-h, $accent-s, 65%); // Solid
+        $accent-11: hsl($accent-h, $accent-s, 79%); // Accessible text
+        $accent-12: hsl($accent-h, $accent-s, 91%); // Accessible text
 
-$base-70: hsl($base-h,
-        $base-s,
-        calc($base-l + calc(40% * $base-multiplier)));
-
-$base-80: hsl($base-h,
-        $base-s,
-        calc($base-l + calc(70% * $base-multiplier)));
-
-$base-90: hsl($base-h,
-        $base-s,
-        calc($base-l + calc(95% * $base-multiplier)));
+        $base-1: hsl(150, 6%, 7%); // Backgrounds
+        $base-2: hsl(150, 4%, 9%); // Backgrounds
+        $base-3: hsl(150, 3%, 13%); // Interactive
+        $base-4: hsl(160, 4%, 16%); // Interactive
+        $base-5: hsl(160, 3%, 19%); // Interactive
+        $base-6: hsl(150, 4%, 22%); // Borders & separators
+        $base-7: hsl(156, 4%, 28%); // Borders & separators
+        $base-8: hsl(154, 4%, 37%); // Borders & separators
+        $base-9: hsl(157, 6%, 41%); // Solid
+        $base-10: hsl(160, 5%, 47%); // Solid
+        $base-11: hsl(158, 5%, 69%); // Accessible text
+        $base-12: hsl(150, 6%, 93%); // Accessible text
+}

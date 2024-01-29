@@ -2,7 +2,7 @@
 import { ChevronsUp } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
-import Button from '../../interaction/forms/buttons/Button';
+import Button from '../Button';
 import styles from './ScrollUpButton.module.scss';
 import { useEffect, useState } from 'react';
 

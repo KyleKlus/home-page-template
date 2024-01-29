@@ -3,7 +3,7 @@
 import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 
-import ScrollUpButton from '@/lib/components/layouts/scrollUpButton/ScrollUpButton';
+import ScrollUpButton from '@/lib/components/interaction/forms/buttons/scrollUpButton/ScrollUpButton';
 import SideNavigationButton from './sideNavigation/sideNavigationButton/SideNavigationButton';
 import Card from '@/lib/components/container/Card';
 import NavLink from '@/lib/components/interaction/links/NavLink';

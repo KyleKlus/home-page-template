@@ -5,13 +5,13 @@
 
   position: fixed;
   z-index: 22;
-  width: var($width);
-  right: var($width);
-  bottom: var($width);
+  width: $width;
+  right: $width;
+  bottom: $width;
   box-shadow: $shadow-5;
 
   opacity: 0;
-  transform: translateY(calc(2 * var($width)));
+  transform: translateY(calc(2 * $width));
   transition: background 200ms ease, transform 400ms ease, opacity 1200ms ease;
 
 
@@ -22,7 +22,11 @@
 }
 
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {}
+@media (hover: hover) and (pointer: fine) {
+  .scrollUpButton:hover{
+    box-shadow: $shadow-5;
+  }
+}
 
 @media (prefers-reduced-motion) {}
 

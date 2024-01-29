@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import ScrollUpButton from "../scrollUpButton/ScrollUpButton";
+import ScrollUpButton from "../../interaction/forms/buttons/scrollUpButton/ScrollUpButton";
 import styles from './Main.module.scss';
 
 export default function Main({

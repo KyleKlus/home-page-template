@@ -22,7 +22,6 @@ html[class='dark'] {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: $base-90;
   font-family: $font-interface;
 }
 
@@ -34,34 +33,33 @@ html[class='dark'] {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $base-10;
+  background: $base-bg-2;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $base-70;
-  border: 3.5px solid $base-10;
+  background: $base-sep-2;
+  border: 3.5px solid $base-bg-2;
   border-radius: 8px;
 }
 
 ::-webkit-scrollbar-corner {
-  color: $base-70;
+  color: $base-sep-2;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $base-80;
+  background: $base-sep-3;
 }
 
 html,
 body {
-  background-color: $base-05;
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
 }
 
 hr {
-  border: 0.75px solid $base-60;
+  border: 0.75px solid $base-sep-2;
   border-radius: 1px;
 }
 

@@ -1,0 +1,68 @@
+@use 'sass:color';
+@import './variables.module.scss';
+
+
+
+:root,
+.light,
+.light-theme,
+.dark,
+.dark-theme {
+    --color-page-background: $base-bg-1 !important;
+
+    --red-1: $accent-1 !important; // Backgrounds
+    --red-2: $accent-2 !important; // Backgrounds
+    --red-3: $accent-3 !important; // Interactive
+    --red-4: $accent-4 !important; // Interactive
+    --red-5: $accent-5 !important; // Interactive
+    --red-6: $accent-6 !important; // Borders & separators
+    --red-7: $accent-7 !important; // Borders & separators
+    --red-8: $accent-8 !important; // Borders & separators
+    --red-9: $accent-9 !important; // Solid
+    --red-10: $base-10 !important; // Solid
+    --red-11: $accent-11 !important; // Accessible text
+    --red-12: $accent-12 !important; // Accessible text
+
+    --red-a1: color.adjust($accent-1, $alpha: -0.2) !important; // Backgrounds
+    --red-a2: color.adjust($accent-2, $alpha: -0.2) !important; // Backgrounds
+    --red-a3: color.adjust($accent-3, $alpha: -0.2) !important; // Interactive
+    --red-a4: color.adjust($accent-4, $alpha: -0.2) !important; // Interactive
+    --red-a5: color.adjust($accent-5, $alpha: -0.2) !important; // Interactive
+    --red-a6: color.adjust($accent-6, $alpha: -0.2) !important; // Borders & separators
+    --red-a7: color.adjust($accent-7, $alpha: -0.2) !important; // Borders & separators
+    --red-a8: color.adjust($accent-8, $alpha: -0.2) !important; // Borders & separators
+    --red-a9: color.adjust($accent-9, $alpha: -0.2) !important; // Solid
+    --red-a10: color.adjust($accent-10, $alpha: -0.2) !important; // Solid
+    --red-a11: color.adjust($accent-11, $alpha: -0.2) !important; // Accessible text
+    --red-a12: color.adjust($accent-12, $alpha: -0.2) !important; // Accessible text
+
+    --sage-1: $base-1;
+    --sage-2: $base-2;
+
+    --sage-3: $base-3;
+    --sage-4: $base-4;
+    --sage-5: $base-5;
+
+    --sage-6: $base-6;
+    --sage-7: $base-7;
+    --sage-8: $base-8;
+
+    --sage-9: $base-9;
+    --sage-10: $base-10;
+
+    --sage-11: $base-11;
+    --sage-12: $base-12;
+
+    --sage-a1: color.adjust($base-1, $alpha: -0.2); // Backgrounds
+    --sage-a2: color.adjust($base-2, $alpha: -0.2); // Backgrounds
+    --sage-a3: color.adjust($base-3, $alpha: -0.2); // Interactive
+    --sage-a4: color.adjust($base-4, $alpha: -0.2); // Interactive
+    --sage-a5: color.adjust($base-5, $alpha: -0.2); // Interactive
+    --sage-a6: color.adjust($base-6, $alpha: -0.2); // Borders & separators
+    --sage-a7: color.adjust($base-7, $alpha: -0.2); // Borders & separators
+    --sage-a8: color.adjust($base-8, $alpha: -0.2); // Borders & separators
+    --sage-a9: color.adjust($base-9, $alpha: -0.2); // Solid
+    --sage-a10: color.adjust($base-10, $alpha: -0.2); // Solid
+    --sage-a11: color.adjust($base-11, $alpha: -0.2); // Accessible text
+    --sage-a12: color.adjust($base-12, $alpha: -0.2); // Accessible text
+}

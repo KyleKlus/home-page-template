@@ -1,7 +1,7 @@
 import Footer from '@/lib/components/layouts/footer/Footer';
 import Header from '@/lib/components/layouts/header/Header';
 import Main from '@/lib/components/layouts/main/Main';
-import ThemeButton from '@/lib/components/layouts/themeButton/ThemeButton';
+import ThemeButton from '@/lib/components/interaction/forms/buttons/themeButton/ThemeButton';
 
 export default function DefaultLayout({
   children,
@@ -13,8 +13,8 @@ export default function DefaultLayout({
       {/* <Header><ThemeButton /></Header> */}
       <Main>
         {children}
+        {/* <Footer /> */}
       </Main>
-      {/* <Footer /> */}
     </>
   )
 }
