@@ -1,37 +1,68 @@
 'use client'
 import { useTheme } from 'next-themes'
 
-import Image from 'next/image';
-
 import styles from './ThemeButton.module.scss';
 
-import darkThemeImg from '@/lib/assets/dark-mode.svg';
-import lightThemeImg from '@/lib/assets/light-mode.svg';
+import { useEffect, useState } from 'react';
+import { MoonIcon, SunIcon, SunMoonIcon } from 'lucide-react';
+import Button from '@/lib/components/interaction/forms/buttons/Button';
 
 interface IThemeButtonProps { }
 
-export default function ThemeButton(
+const ThemeButton = (
   props: React.PropsWithChildren<IThemeButtonProps>
-) {
+) => {
+  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    let nextTheme = '';
+
+    switch (theme) {
+      case 'light':
+        nextTheme = 'dark'
+        break;
+      case 'dark':
+        nextTheme = 'system'
+        break;
+      case 'system':
+        nextTheme = 'light'
+        break;
+      default:
+        nextTheme = 'system'
+        break;
+    }
+
+    setTheme(nextTheme);
   };
 
+  const getThemeIcon = (theme: string | undefined) => {
+    switch (theme) {
+      case 'light':
+        return <SunIcon />;
+      case 'dark':
+        return <MoonIcon />;
+      case 'system':
+        return <SunMoonIcon />;
+      default:
+        break;
+    }
+  }
+
   return (
-    <button
+    <Button
       className={styles.themeButton}
-      onClick={toggleTheme}
+      radius={'full'}
+      onClick={mounted ? toggleTheme : () => { }}
     >
-      <Image
-        src={theme === 'dark' ? darkThemeImg : lightThemeImg}
-        alt=""
-        width={'16'}
-        height={'16'}
-        quality={100}
-      />
-      {props.children}
-    </button>
+      {mounted && getThemeIcon(theme)}
+    </Button>
   );
 }
+
+export default ThemeButton;

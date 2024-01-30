@@ -4,17 +4,8 @@
   --toggle-width: 24px;
   --toggle-height: 24px;
   --button-padding: 6px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-  font-size: 1.5rem;
-  line-height: 1;
   width: var(--toggle-width);
   height: var(--toggle-height);
-  border-radius: 50%;
   padding: var(--button-padding);
 }
 

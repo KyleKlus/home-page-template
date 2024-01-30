@@ -1,5 +1,3 @@
-@import '@/app/variables.module.scss';
-
 .scrollUpButton {
   $width: 42px;
 
@@ -8,7 +6,7 @@
   width: $width;
   right: $width;
   bottom: $width;
-  box-shadow: $shadow-5;
+  box-shadow: var(--shadow-5);
 
   opacity: 0;
   transform: translateY(calc(2 * $width));
@@ -24,7 +22,7 @@
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .scrollUpButton:hover{
-    box-shadow: $shadow-5;
+    box-shadow: var(--shadow-5);
   }
 }
 

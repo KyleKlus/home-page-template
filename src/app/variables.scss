@@ -1,0 +1,30 @@
+// Layout
+$max-content-width: 1100px;
+
+$header-height: 64px;
+$footer-height: 144px;
+$sideNav-width: 300px;
+
+// Fonts
+$font-interface: 'Fira Code';
+$font-text: 'Fira Code';
+$font-mono: 'Fira Code',
+        ui-monospace,
+        Menlo,
+        Monaco,
+        'Cascadia Mono',
+        'Segoe UI Mono',
+        'Roboto Mono',
+        'Oxygen Mono',
+        'Ubuntu Monospace',
+        'Source Code Pro',
+        'Fira Mono',
+        'Droid Sans Mono',
+        'Courier New',
+        monospace;
+
+// Roundedness
+$rounded-sm: 4px;
+$rounded-md: 8px;
+$rounded-lg: 32px;
+$rounded-full: 50%;

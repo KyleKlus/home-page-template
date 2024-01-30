@@ -2,7 +2,6 @@
 import { Section } from '@radix-ui/themes';
 import styles from './PageSection.module.scss';
 import { cn } from '@/lib/utils';
-import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 import React from 'react';
 

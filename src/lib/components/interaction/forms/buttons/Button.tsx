@@ -16,9 +16,12 @@ export const buttonVariants = cva(styles.buttonStyle,
 				outline: styles.outline,
 				outlinePlain: styles.plainOutline,
 				soft: styles.soft,
-				// destructive:,
-				// ghost: "hover:bg-accent hover:text-accent-foreground",
-				// link: "text-primary underline-offset-4 hover:underline",
+			},
+			width: {
+				flex: '',
+				fitContent: styles.fitContent,
+				standard: styles.fitStandard,
+				longStandard: styles.fitLongStandard
 			},
 			radius: {
 				small: styles.small,
@@ -26,10 +29,22 @@ export const buttonVariants = cva(styles.buttonStyle,
 				large: styles.large,
 				full: styles.full,
 			},
+			justifyContent: {
+				left: styles.justifyLeft,
+				center: styles.justifyCenter,
+				right: styles.justifyRight,
+			},
+			isActive: {
+				true: styles.isActive,
+				false: ''
+			}
 		},
 		defaultVariants: {
 			variant: "surface",
 			radius: "small",
+			justifyContent: "center",
+			width: 'flex',
+			isActive: false
 		},
 	}
 )
@@ -38,10 +53,24 @@ export interface IButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
 	VariantProps<typeof buttonVariants> {
 	asChild?: boolean,
+	isActive?: boolean,
+	isIcon?: boolean,
+	text?: string,
 }
 
 const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
-	({ className, variant, radius, asChild = false, ...props }, ref) => {
+	({
+		className,
+		variant,
+		width,
+		justifyContent,
+		radius,
+		isIcon = false,
+		isActive = false,
+		asChild = false,
+		text,
+		...props
+	}, ref) => {
 		const Comp = asChild ? Slot : "button"
 		return (
 			<Comp
@@ -50,10 +79,20 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
 				className={cn(
 					styles.buttonPreset,
 					variant === 'unstyled' && className,
-					variant !== 'unstyled' && buttonVariants({ variant, radius, className })
+					variant !== 'unstyled' && buttonVariants({
+						variant,
+						width,
+						justifyContent,
+						radius,
+						isActive,
+						className
+					})
 				)}
 			>
 				{props.children}
+				{isIcon && text !== undefined &&
+					<span>{text}</span>
+				}
 			</Comp>
 		);
 	}

@@ -1,6 +1,8 @@
 'use client'
 import { Theme, ThemePanel } from '@radix-ui/themes';
 import { ThemeProvider } from 'next-themes'
+import '../theme-config.scss';
+import '@radix-ui/themes/styles.css';
 
 // TODO: find a way of using contexts
 // import AuthProvider from '@/lib/components/context/AuthContext';

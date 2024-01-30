@@ -5,8 +5,6 @@ import { Fira_Code } from "next/font/google";
 
 const firaCode = Fira_Code({ weight: '400', subsets: ['latin'] });
 import './globals.scss';
-import './theme-config.scss';
-import '@radix-ui/themes/styles.css';
 
 export const metadata: Metadata = {
   title: 'Kyle Klus | Website',
