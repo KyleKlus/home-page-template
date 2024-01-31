@@ -1,5 +1,5 @@
 'use client'
-import Content from '@/lib/components/container/Content';
+import Content from '@/lib/components/container/Container';
 import styles from './Login.module.scss'
 import Image from 'next/image';
 

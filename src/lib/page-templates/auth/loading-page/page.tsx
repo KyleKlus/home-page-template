@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import Content from '@/lib/components/container/Content';
+import Content from '@/lib/components/container/Container';
 import styles from './LoadingPage.module.scss'
 import logoImg from '@/lib/assets/KK_Logo.svg'
 

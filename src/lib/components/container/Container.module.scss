@@ -1,18 +1,20 @@
 /** @format */
 
-
-.main {
+.container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  min-height: 100dvh;
-  scroll-behavior: smooth;
+  justify-content: center;
 
-
-  /* animation: slide-out 2s infinite; */
+  width: 100%;
 }
 
+.innerContainer {
+  display: flex;
+  flex-direction: column;
 
+  width: 100%;
+}
 
 
 /* Enable hover only on non-touch devices */

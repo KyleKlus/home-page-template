@@ -1,4 +1,4 @@
-import Content from "@/lib/components/container/Content";
+import Content from "@/lib/components/container/Container";
 import IPost from "@/lib/interfaces/IPost";
 import Link from "next/link";
 

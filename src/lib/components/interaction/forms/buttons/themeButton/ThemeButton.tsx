@@ -13,7 +13,7 @@ const ThemeButton = (
   props: React.PropsWithChildren<IThemeButtonProps>
 ) => {
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme, resolvedTheme } = useTheme()
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
@@ -47,10 +47,8 @@ const ThemeButton = (
         return <SunIcon />;
       case 'dark':
         return <MoonIcon />;
-      case 'system':
-        return <SunMoonIcon />;
       default:
-        break;
+        return <SunMoonIcon />;
     }
   }
 

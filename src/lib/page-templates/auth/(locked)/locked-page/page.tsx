@@ -1,8 +1,8 @@
 'use client'
-import Content from '@/lib/components/container/Content';
+import Content from '@/lib/components/container/Container';
 
 import Card from '@/lib/components/container/Card';
-import { IAuthContext, useAuth , AuthContext} from '@/lib/components/context/AuthContext';
+import { IAuthContext, useAuth, AuthContext } from '@/lib/components/context/AuthContext';
 import { IDataBaseContext, useDB } from '@/lib/components/context/DatabaseContext';
 import { useContext } from 'react';
 

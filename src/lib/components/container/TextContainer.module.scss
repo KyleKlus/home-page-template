@@ -1,27 +1,10 @@
 /** @format */
 
 .text {
-  --text-width: 750px;
   max-width: var(--text-width);
   width: 100%;
   white-space: pre-wrap;
   word-wrap: break-word;
-  padding: 0px 8px;
-
-}
-
-
-
-.left {
-  text-align: left !important;
-}
-
-.center {
-  text-align: center !important;
-}
-
-.right {
-  text-align: right !important;
 }
 
 /* Enable hover only on non-touch devices */
@@ -32,10 +15,7 @@
 /* Mobile */
 
 @media (max-width: 800px) {
-
-  .text {
-    padding: 0px 24px 18px 24px;
-  }
+  
 }
 
 /* Tablet and Smaller Desktop */

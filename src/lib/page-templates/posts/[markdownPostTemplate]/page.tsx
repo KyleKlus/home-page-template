@@ -5,7 +5,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import MarkdownSection from '@/lib/components/markdown/MarkdownSection';
 import Markdown from 'markdown-to-jsx';
-import Content from '@/lib/components/container/Content';
+import Content from '@/lib/components/container/Container';
 import IPost from '@/lib/interfaces/IPost';
 import { GetStaticPropsContext } from 'next/types';
 import MarkdownImage from '@/lib/components/markdown/MarkdownImage';

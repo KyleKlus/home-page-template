@@ -2,7 +2,7 @@
 // INFO: Only use with auth stuff
 import { IAuthContext, RedirectPathOptions, redirectPaths, useAuth, AuthContext } from '@/lib/components/context/AuthContext';
 
-import Content from '@/lib/components/container/Content';
+import Content from '@/lib/components/container/Container';
 import { useRouter } from 'next/navigation';
 import { useContext } from 'react';
 
