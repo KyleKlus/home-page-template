@@ -1,0 +1,12 @@
+.removeButtonStyles {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    font-size: inherit;
+
+    &.isNavigationLink {
+        padding-bottom: 3px;
+    }
+}
