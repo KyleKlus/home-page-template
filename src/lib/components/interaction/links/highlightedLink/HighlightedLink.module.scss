@@ -1,0 +1,76 @@
+.highlightedLink {
+    color: var(--base-text-2);
+    text-decoration: none;
+    position: relative;
+    font-size: large;
+    box-shadow: none;
+    cursor: pointer;
+    margin-bottom: 2px;
+    transform: scale(1);
+    transition: transform 200ms ease;
+    width: fit-content;
+}
+
+.highlightedLink::after {
+    content: '';
+    position: absolute;
+    background-color: var(--accent-solid-2);
+    height: 2px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    visibility: hidden;
+    transform: scale(0);
+    transform-origin: 0 50%;
+    transition: transform 200ms ease;
+}
+
+.highlightedLink.isHighlighted::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.highlightedLink.isButton {
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+
+    &.hasIcon > *:not(svg) {
+        margin-bottom: -3px;
+    }
+
+    &.isHighlighted::after,
+    &::after {
+        display: none;
+    }
+}
+
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+
+    .highlightedLink:not(.isButton):focus-within::after,
+    .highlightedLink:not(.isButton):hover::after {
+        box-shadow: none;
+        visibility: visible;
+        transform: scaleX(1);
+        background-color: var(--accent-solid-2);
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .highlightedLink:not(.isButton)::after {
+        transition-duration: 200ms;
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {}
+
+@media (prefers-color-scheme: dark) {}
