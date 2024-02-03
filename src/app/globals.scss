@@ -43,12 +43,12 @@
   --rounded-full: 50%;
 
   // Shadows
-  --shadow-0: 0 0.9px 1.4px hsla(0, 0%, 0%, 0.12);
-  --shadow-1: 0 1.2px 1.9px hsla(0, 0%, 0%, 0.12);
-  --shadow-2: 0 1.9px 2.6px hsla(0, 0%, 0%, 0.12);
-  --shadow-3: 0 2px 4px hsla(0, 0%, 0%, 0.12);
-  --shadow-4: 0 3px 6px hsla(0, 0%, 0%, 0.12);
-  --shadow-5: 0 4px 8px hsla(0, 0%, 0%, 0.12);
+  --shadow-level-0: 0 0.9px 1.4px hsla(0, 0%, 0%, 0.12);
+  --shadow-level-1: 0 1.2px 1.9px hsla(0, 0%, 0%, 0.12);
+  --shadow-level-2: 0 1.9px 2.6px hsla(0, 0%, 0%, 0.12);
+  --shadow-level-3: 0 2px 4px hsla(0, 0%, 0%, 0.12);
+  --shadow-level-4: 0 3px 6px hsla(0, 0%, 0%, 0.12);
+  --shadow-level-5: 0 4px 8px hsla(0, 0%, 0%, 0.12);
 
   --interaction-shadow: 2px 2px 1px 0px hsla(0, 0%, 0%, 0.3);
   --interaction-shadow-hover: 2px 2px 1px 0px hsla(0, 0%, 0%, 0.4);
@@ -61,18 +61,30 @@
   --accent-s: 59%;
 
   // -> Accent
-  --accent-1: hsl(var(--accent-h), var(--accent-s), 99%); // Backgrounds
-  --accent-2: hsl(var(--accent-h), var(--accent-s), 98%); // Backgrounds
-  --accent-3: hsl(var(--accent-h), var(--accent-s), 96%); // Interactive
-  --accent-4: hsl(var(--accent-h), var(--accent-s), 93%); // Interactive
-  --accent-5: hsl(var(--accent-h), var(--accent-s), 90%); // Interactive
-  --accent-6: hsl(var(--accent-h), var(--accent-s), 87%); // Borders & separators
-  --accent-7: hsl(var(--accent-h), var(--accent-s), 81%); // Borders & separators
-  --accent-8: hsl(var(--accent-h), var(--accent-s), 74%); // Borders & separators
-  --accent-9: hsl(var(--accent-h), var(--accent-s), 59%); // Solid
-  --accent-10: hsl(var(--accent-h), var(--accent-s), 55%); // Solid
-  --accent-11: hsl(var(--accent-h), var(--accent-s), 49%); // Accessible text
-  --accent-12: hsl(var(--accent-h), var(--accent-s), 24%); // Accessible text
+  --accent-l-1: 99%;
+  --accent-1: hsl(var(--accent-h), var(--accent-s), var(--accent-l-1)); // Backgrounds
+  --accent-l-2: 98%;
+  --accent-2: hsl(var(--accent-h), var(--accent-s), var(--accent-l-2)); // Backgrounds
+  --accent-l-3: 96%;
+  --accent-3: hsl(var(--accent-h), var(--accent-s),  var(--accent-l-3)); // Interactive
+  --accent-l-4: 93%;
+  --accent-4: hsl(var(--accent-h), var(--accent-s),  var(--accent-l-4)); // Interactive
+  --accent-l-5: 90%;
+  --accent-5: hsl(var(--accent-h), var(--accent-s),  var(--accent-l-5)); // Interactive
+  --accent-l-6: 87%;
+  --accent-6: hsl(var(--accent-h), var(--accent-s),  var(--accent-l-6)); // Borders & separators
+  --accent-l-7: 81%;
+  --accent-7: hsl(var(--accent-h), var(--accent-s),  var(--accent-l-7)); // Borders & separators
+  --accent-l-8: 74%;
+  --accent-8: hsl(var(--accent-h), var(--accent-s),  var(--accent-l-8)); // Borders & separators
+  --accent-l-9: 59%;
+  --accent-9: hsl(var(--accent-h), var(--accent-s),  var(--accent-l-9)); // Solid
+  --accent-l-10: 55%;
+  --accent-10: hsl(var(--accent-h), var(--accent-s),  var(--accent-l-10)); // Solid
+  --accent-l-11: 49%;
+  --accent-11: hsl(var(--accent-h), var(--accent-s),  var(--accent-l-11)); // Accessible text
+  --accent-l-12: 24%;
+  --accent-12: hsl(var(--accent-h), var(--accent-s),  var(--accent-l-12)); // Accessible text
 
   --accent-bg-1: var(--accent-1);
   --accent-bg-2: var(--accent-2);
@@ -103,6 +115,9 @@
   --base-9: hsl(158, 3%, 54%); // Solid
   --base-10: hsl(158, 3%, 50%); // Solid
   --base-11: hsl(160, 3%, 38%); // Accessible text
+  --base-h-12: 156;
+  --base-s-12: 12%;
+  --base-l-12: 12%;
   --base-12: hsl(156, 12%, 12%); // Accessible text
 
   --white: hsl(150, 33%, 98%);

@@ -1,10 +1,26 @@
 @use 'sass:color';
 
+.radix-themes{
+    --shadow-0: var(--shadow-level-0) !important;
+    --shadow-1: var(--shadow-level-1) !important;
+    --shadow-2: var(--shadow-level-2) !important;
+    --shadow-3: var(--shadow-level-3) !important;
+    --shadow-4: var(--shadow-level-4) !important;
+    --shadow-5: var(--shadow-level-5) !important;
+}
+
 :root,
 .light,
 .light-theme,
 .dark,
 .dark-theme {
+    --shadow-0: var(--shadow-level-0) !important;
+    --shadow-1: var(--shadow-level-1) !important;
+    --shadow-2: var(--shadow-level-2) !important;
+    --shadow-3: var(--shadow-level-3) !important;
+    --shadow-4: var(--shadow-level-4) !important;
+    --shadow-5: var(--shadow-level-5) !important;
+
     --color-page-background: var(--base-bg-1) !important;
 
     --red-1: var(--accent-1) !important; // Backgrounds
