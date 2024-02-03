@@ -54,7 +54,7 @@ export interface IButtonProps
 	VariantProps<typeof buttonVariants> {
 	asChild?: boolean,
 	isActive?: boolean,
-	isIcon?: boolean,
+	hasIcon?: boolean,
 	text?: string,
 }
 
@@ -65,7 +65,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
 		width,
 		justifyContent,
 		radius,
-		isIcon = false,
+		hasIcon = false,
 		isActive = false,
 		asChild = false,
 		text,
@@ -78,6 +78,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
 				ref={ref}
 				className={cn(
 					styles.buttonPreset,
+					hasIcon && styles.hasIcon,
 					variant === 'unstyled' && className,
 					variant !== 'unstyled' && buttonVariants({
 						variant,
@@ -90,7 +91,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
 				)}
 			>
 				{props.children}
-				{isIcon && text !== undefined &&
+				{hasIcon && text !== undefined &&
 					<span>{text}</span>
 				}
 			</Comp>
