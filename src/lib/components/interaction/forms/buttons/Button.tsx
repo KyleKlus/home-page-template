@@ -3,19 +3,23 @@ import styles from './Button.module.scss'
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 import React from 'react';
+import highLightedLinkStyles from '@/lib/components/interaction/links/highlightedLink/HighlightedLink.module.scss'
+import linkStyles from '@/lib/components/interaction/links/styledLink/StyledLink.module.scss'
 
-export const buttonVariants = cva(styles.buttonStyle,
+export const buttonVariants = cva('',
 	{
 		variants: {
 			variant: {
 				unstyled: '',
-				surface: '',
-				surfacePlain: styles.plain,
-				solid: styles.solid,
-				solidPlain: styles.plainSolid,
-				outline: styles.outline,
-				outlinePlain: styles.plainOutline,
-				soft: styles.soft,
+				surface: styles.buttonStyle,
+				surfacePlain: cn(styles.buttonStyle, styles.plain),
+				solid: cn(styles.buttonStyle, styles.solid),
+				solidPlain: cn(styles.buttonStyle, styles.plainSolid),
+				outline: cn(styles.buttonStyle, styles.outline),
+				outlinePlain: cn(styles.buttonStyle, styles.plainOutline),
+				soft: cn(styles.buttonStyle, styles.soft),
+				link: cn(styles.removeButtonStyles, linkStyles.styledLink),
+				navigationLink: cn(highLightedLinkStyles.highlightedLink, styles.removeButtonStyles, styles.isNavigationLink),
 			},
 			width: {
 				flex: '',
@@ -79,8 +83,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
 				className={cn(
 					styles.buttonPreset,
 					hasIcon && styles.hasIcon,
-					variant === 'unstyled' && className,
-					variant !== 'unstyled' && buttonVariants({
+					buttonVariants({
 						variant,
 						width,
 						justifyContent,

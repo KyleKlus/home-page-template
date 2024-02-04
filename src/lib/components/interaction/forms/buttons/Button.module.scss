@@ -9,6 +9,19 @@
     }
 }
 
+.removeButtonStyles {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    font-size: inherit;
+
+    &.isNavigationLink {
+        padding-bottom: 3px;
+    }
+}
+
 .buttonStyle {
     border: 0;
     outline: 1px solid var(--base-sep-1);
@@ -64,8 +77,8 @@
     }
 
     &.soft {
-        outline-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-9) , 0.7);
-        background-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-9) , 0.7);
+        outline-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-9), 0.7);
+        background-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-9), 0.7);
         color: var(--accent-solid-1);
     }
 
@@ -113,18 +126,18 @@
 
         &.outline {
             outline-color: var(--accent-11);
-            background-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-11) , 0.2);
+            background-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-11), 0.2);
             color: var(--accent-11);
         }
 
         &.soft {
-            outline-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-11) , 0.2);
-            background-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-11) , 0.2);
+            outline-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-11), 0.2);
+            background-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-11), 0.2);
             color: var(--accent-11);
         }
 
         &.plainOutline {
-            background-color: hsla(var(--base-h-12), var(--base-s-12), var(--base-l-12) , 0.2);
+            background-color: hsla(var(--base-h-12), var(--base-s-12), var(--base-l-12), 0.2);
             color: var(--base-text-2);
             outline-color: var(--base-text-2);
         }
@@ -148,13 +161,13 @@
 
         &.outline {
             outline-color: var(--accent-solid-2);
-            background-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-10) , 0.1);
+            background-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-10), 0.1);
             color: var(--accent-solid-2);
         }
 
         &.soft {
-            outline-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-10) , 0.1);
-            background-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-10) , 0.1);
+            outline-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-10), 0.1);
+            background-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l-10), 0.1);
             color: var(--accent-solid-2);
         }
 
@@ -163,7 +176,7 @@
         }
 
         &.plainOutline {
-            background-color: hsla(var(--base-h-12), var(--base-s-12), var(--base-l-12) , 0.1);
+            background-color: hsla(var(--base-h-12), var(--base-s-12), var(--base-l-12), 0.1);
             color: var(--base-text-2);
             outline-color: var(--base-text-2);
         }
