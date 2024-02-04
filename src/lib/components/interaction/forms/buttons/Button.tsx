@@ -83,12 +83,13 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
 				className={cn(
 					styles.buttonPreset,
 					hasIcon && styles.hasIcon,
+					isActive && variant === 'navigationLink' && highLightedLinkStyles.isHighlighted,
+					isActive && variant !== 'navigationLink' && styles.isActive,
 					buttonVariants({
 						variant,
 						width,
 						justifyContent,
 						radius,
-						isActive,
 						className
 					})
 				)}
