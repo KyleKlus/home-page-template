@@ -9,7 +9,8 @@
   gap: 24px;
 }
 
-.nav > *:last-child {
+.nav > *:last-child,
+.nav > *:nth-last-child(2) {
   margin-bottom: 8px;
 }
 
@@ -21,7 +22,7 @@
 /* Mobile */
 @media (max-width: 600px) {
   .nav {
-    gap: 0px;
+    gap: 8px;
   }
 }
 

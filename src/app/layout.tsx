@@ -13,6 +13,8 @@ import headerStyles from '@/lib/layouts/header/Header.module.css'
 import ScrollNavLink from '@/lib/interaction/links/ScrollNavLink';
 
 import { Fira_Code } from "next/font/google";
+import { ThemeProvider } from '@/lib/provider/theme-provider';
+import ThemeButton from '@/lib/interaction/forms/buttons/ThemeButton';
 
 const firaCode = Fira_Code({ weight: '400', subsets: ['latin'] });
 
@@ -21,33 +23,35 @@ interface ILayoutProps {
     className?: string;
 }
 
-
 export default function Layout(props: React.PropsWithChildren<ILayoutProps>) {
     return (
         <html style={{ fontFamily: firaCode.style.fontFamily }}>
             <body>
-                <Header >
-                    <ScrollNavLink
-                        className={headerStyles.headerNavLink}
-                        elementName="https://kyleklus.de/#heroPage"
-                        displayText="Home"
-                    />
-                    <ScrollNavLink
-                        className={headerStyles.headerNavLink}
-                        elementName="https://kyleklus.de/#portfolioPage"
-                        displayText="Portfolio"
-                    />
-                    <ScrollNavLink
-                        className={headerStyles.headerNavLink}
-                        elementName="https://kyleklus.de/#aboutPage"
-                        displayText="About"
-                    />
-                </Header >
-                <Main>
-                    <div id={'top'}></div>
-                    {props.children}
-                    <Footer />
-                </Main>
+                <ThemeProvider>
+                    <Header >
+                        <ScrollNavLink
+                            className={headerStyles.headerNavLink}
+                            elementName="https://kyleklus.de/#heroPage"
+                            displayText="Home"
+                        />
+                        <ScrollNavLink
+                            className={headerStyles.headerNavLink}
+                            elementName="https://kyleklus.de/#portfolioPage"
+                            displayText="Portfolio"
+                        />
+                        <ScrollNavLink
+                            className={headerStyles.headerNavLink}
+                            elementName="https://kyleklus.de/#aboutPage"
+                            displayText="About"
+                        />
+                        <ThemeButton />
+                    </Header >
+                    <Main>
+                        <div id={'top'}></div>
+                        {props.children}
+                        <Footer />
+                    </Main>
+                </ThemeProvider>
             </body>
         </html>
     );

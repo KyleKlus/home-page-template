@@ -14,7 +14,7 @@
     --font-monospace-theme: 'Fira Code';
 }
 
-body {
+html {
     --shadowElevation_0: 0 0.9px 1.4px hsla(0, 0%, 0%, 0.12);
     --shadowElevation_1: 0 1.2px 1.9px hsla(0, 0%, 0%, 0.12);
     --shadowElevation_2: 0 1.9px 2.6px hsla(0, 0%, 0%, 0.12);
@@ -117,12 +117,16 @@ body {
             calc(var(--bg-color-l) + calc(95% * var(--bg-color-multiplier))));
 }
 
-body[data-theme='dark'] {
-    --bg-color-l: 5%;
-    --bg-color-multiplier: 1;
-    --color-accent-l-multiplier: 1;
-    --color-accent-l-offset: 8%;
-    --filter-brightness: 0.4;
+html.dark {
+    --bg-color-l: 5% !important;
+    --bg-color-multiplier: 1 !important;
+    --color-accent-l-multiplier: 1 !important;
+    --color-accent-s: 52% !important;
+    --filter-brightness: 0.4 !important;
+}
+
+html.dark #scroll-up-button-image {
+    filter: invert(1) !important;
 }
 
 * {
@@ -142,9 +146,6 @@ body[data-theme='dark'] {
     font-display: swap;
 }
 
-body[data-theme='dark'] #scroll-up-button-image {
-    filter: invert(1);
-}
 
 /* width */
 ::-webkit-scrollbar {
