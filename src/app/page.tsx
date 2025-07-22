@@ -5,7 +5,7 @@ import Content from "@/lib/container/Content";
 import type { Metadata, Viewport } from 'next'
 
 export const metadata: Metadata = {
-    title: "Kyle Klus | Website",
+    title: "Kyle Klus | Website 🚀",
     description: "Website of Kyle Klus.",
     openGraph: {
         type: "website",
