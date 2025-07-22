@@ -1,9 +1,10 @@
 /** @format */
+"use client"
 
-import scrollStyles from '@/styles/lib/components/interaction/links/ScrollNavLink.module.css';
-import navStyles from '@/styles/lib/components/interaction/links/NavLink.module.css';
+import scrollStyles from './ScrollNavLink.module.css';
+import navStyles from './NavLink.module.css';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 interface INavLinkProps {
@@ -13,11 +14,11 @@ interface INavLinkProps {
 }
 
 export default function ScrollNavLink(props: React.PropsWithChildren<INavLinkProps>) {
-  const router = useRouter();
+  const pathname = usePathname();
   const [isInView, setIsInView] = useState(false)
   const styleClass = props.className ? props.className : ''
   const classes =
-    isInView || router.pathname.endsWith(props.elementName) ? [navStyles.isCurrentWindow, styleClass].join(' ') : styleClass;
+    isInView || pathname.endsWith(props.elementName) ? [navStyles.isCurrentWindow, styleClass].join(' ') : styleClass;
 
   useEffect(() => {
     function determineCurrentPage() {

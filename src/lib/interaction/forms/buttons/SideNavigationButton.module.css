@@ -13,9 +13,9 @@
   line-height: 1;
   width: var(--toggle-width);
   height: var(--toggle-height);
-  border-radius: 50%;
+  border-radius: 50% !important;
   cursor: pointer;
-  padding: var(--button-padding);
+  padding: var(--button-padding) !important;
   transition: transform 250ms ease, gap 250ms ease, background-color 250ms ease;
 }
 

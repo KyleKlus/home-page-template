@@ -1,5 +1,5 @@
 /** @format */
-import styles from '@/styles/lib/components/container/Main.module.css';
+import styles from './Main.module.css';
 
 interface IMainProps { }
 

@@ -1,5 +1,5 @@
 /** @format */
-import styles from '@/styles/lib/components/layouts/header/SideNavigation.module.css';
+import styles from './SideNavigation.module.css';
 import Card from '@/lib/container/Card';
 import ScrollNavLink from '@/lib/interaction/links/ScrollNavLink';
 

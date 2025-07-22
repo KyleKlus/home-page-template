@@ -1,8 +1,8 @@
 /** @format */
 
-import styles from '@/styles/lib/components/layouts/header/Logo.module.css';
+import styles from './Logo.module.css';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 export default function Logo() {
   const router = useRouter();
@@ -11,7 +11,7 @@ export default function Logo() {
     <div
       onClick={(e) => {
         e.preventDefault();
-        router.push('https://kyleklus.github.io/');
+        router.push('https://kyleklus.de/');
       }}
       className={[styles.logoWrapper].join(' ')}
     >

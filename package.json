@@ -9,21 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/mdx": "^14.0.3",
-    "@types/jquery": "^3.5.29",
-    "@types/node": "^20.10.0",
-    "@types/react": "18.2.38",
-    "@types/react-dom": "18.2.17",
-    "eslint": "8.54.0",
-    "eslint-config-next": "14.0.3",
-    "firebase": "^10.6.0",
-    "firebase-admin": "^11.11.1",
+    "@next/mdx": "^15.4.3",
+    "eslint": "^9.31.0",
     "gray-matter": "^4.0.3",
-    "markdown-to-jsx": "^7.3.2",
-    "next": "^14.0.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sass": "^1.69.5",
-    "typescript": "^5.3.2"
+    "markdown-to-jsx": "^7.7.12",
+    "next": "^15.4.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/jquery": "^3.5.29",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.3",
+    "@eslint/eslintrc": "^3"
   }
 }

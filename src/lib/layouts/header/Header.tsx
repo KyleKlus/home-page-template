@@ -1,7 +1,8 @@
 /** @format */
+"use client"
 
-import styles from '@/styles/lib/components/layouts/header/Header.module.css';
-import sideNavStyles from '@/styles/lib/components/layouts/header/SideNavigation.module.css'
+import styles from './Header.module.css';
+import sideNavStyles from './SideNavigation.module.css'
 import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import ScrollUpButton from '@/lib/interaction/forms/buttons/ScrollUpButton';
@@ -13,9 +14,9 @@ import Logo from '@/lib/layouts/header/Logo';
 import SideNavigation from '@/lib/layouts/header/SideNavigation';
 
 interface IHeaderProps {
-  overrideSideNavContent?: JSX.Element,
-  addSideNavChildren?: JSX.Element[],
-  addSideNavMenuCards?: JSX.Element[]
+  overrideSideNavContent?: React.ReactNode,
+  addSideNavChildren?: React.ReactNode[],
+  addSideNavMenuCards?: React.ReactNode[]
 }
 
 export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
@@ -57,7 +58,6 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
     }
   }
 
-
   useEffect(() => {
 
     window.addEventListener('scroll', hideAndShowHeader);
@@ -70,20 +70,7 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
     <div>
       <header className={[styles.header, isHeaderHiddenClassName.current].join(' ')}>
         <div className={styles.headerLeft}>
-          <SideNavigationButton
-            isActive={isSideNavigationActive}
-            onClick={() => {
-              setIsSideNavigationActive(!isSideNavigationActive);
-              if (!isSideNavigationActive) {
-                isHeaderHiddenClassName.current = isHeaderHiddenClassName.current;
-                setIsHeaderHidden(false);
-              } else {
-                const currentScrollPos = window.pageYOffset;
 
-                isHeaderHiddenClassName.current = currentScrollPos <= 64 ? '' : styles.isVisible
-              }
-            }}
-          />
           <div
             className={
               styles.sideNavigationNegativeSpace + ' ' + isActiveClassName
@@ -105,7 +92,22 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
         </div>
         <HeaderNavigation>
           {props.children}
+          <SideNavigationButton
+            isActive={isSideNavigationActive}
+            onClick={() => {
+              setIsSideNavigationActive(!isSideNavigationActive);
+              if (!isSideNavigationActive) {
+                isHeaderHiddenClassName.current = isHeaderHiddenClassName.current;
+                setIsHeaderHidden(false);
+              } else {
+                const currentScrollPos = window.pageYOffset;
+
+                isHeaderHiddenClassName.current = currentScrollPos <= 64 ? '' : styles.isVisible
+              }
+            }}
+          />
         </HeaderNavigation>
+
       </header>
       <SideNavigation isActive={isSideNavigationActive}>
         {props.overrideSideNavContent
@@ -115,22 +117,22 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
               <h4>Other Sites</h4>
               <NavLink
                 className={sideNavStyles.sideNavLink}
-                pathName="https://kyleklus.github.io/projects"
+                pathName="https://kyleklus.de/projects"
                 displayText="Projects 🛠️"
               />
               <NavLink
                 className={sideNavStyles.sideNavLink}
-                pathName="https://kyleklus.github.io/Kyles-Cookbook/en"
+                pathName="https://kyleklus.de/Kyles-Cookbook/en"
                 displayText="Cookbook 🧑‍🍳 🇬🇧"
               />
               <NavLink
                 className={sideNavStyles.sideNavLink}
-                pathName="https://kyleklus.github.io/Kyles-Cookbook/de"
+                pathName="https://kyleklus.de/Kyles-Cookbook/de"
                 displayText="Cookbook 🧑‍🍳 🇩🇪"
               />
               <NavLink
                 className={sideNavStyles.sideNavLink}
-                pathName="https://kyleklus.github.io/receipt-manager"
+                pathName="https://kyleklus.de/receipt-manager"
                 displayText="Receipt Manager 🧾"
               />
               {props.addSideNavChildren !== undefined && props.addSideNavChildren.map((child) => {
@@ -142,8 +144,8 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
             })}
           </>
         }
-
       </SideNavigation>
+
       <ScrollUpButton isVisible={!isScrollArrowHidden}></ScrollUpButton>
     </div>
   );

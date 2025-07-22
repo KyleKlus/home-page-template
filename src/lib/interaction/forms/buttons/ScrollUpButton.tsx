@@ -1,5 +1,5 @@
 /** @format */
-import styles from '@/styles/lib/components/interaction/forms/buttons/ScrollUpButton.module.css';
+import styles from './ScrollUpButton.module.css';
 import Image from 'next/image';
 
 interface IScrollUpButtonProps {

@@ -1,12 +1,13 @@
 /** @format */
-import styles from '@/styles/lib/components/container/Card.module.css';
+import styles from './Card.module.css';
 
 interface ICardProps {
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export default function Card(props: React.PropsWithChildren<ICardProps>) {
   return (
-    <div className={styles.card + ' ' + props.className}>{props.children}</div>
+    <div className={styles.card + ' ' + props.className} style={props.style}>{props.children}</div>
   );
 }

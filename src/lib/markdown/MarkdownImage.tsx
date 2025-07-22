@@ -1,6 +1,5 @@
 /** @format */
-import styles from '@/styles/lib/components/markdown/MarkdownSection.module.css';
-import Image from 'next/image';
+import styles from './MarkdownSection.module.css';
 
 interface IMarkdownImageProps {
   className?: string;

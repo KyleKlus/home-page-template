@@ -1,5 +1,6 @@
 /** @format */
-import styles from '@/styles/lib/components/interaction/forms/buttons/ThemeButton.module.css';
+"use client"
+import styles from './ThemeButton.module.css';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
