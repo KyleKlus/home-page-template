@@ -1,9 +1,9 @@
 /** @format */
 import styles from './Layout.module.css';
 
-
 import Footer from '@/lib/layouts/footer/Footer';
 import Header from '@/lib/layouts/header/Header';
+import './default-variables.css';
 import './globals.css';
 
 import Main from '@/lib/container/Main';
