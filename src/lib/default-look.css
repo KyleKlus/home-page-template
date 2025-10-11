@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
 :root {
     --max-width: 1100px;
     --border-radius: 12px;
@@ -134,7 +136,7 @@ html.dark #scroll-up-button-image {
     padding: 0;
     margin: 0;
     color: var(--bg-color-90);
-    font-family: var(--font-interface-theme);
+    font-family: var(--font-interface-theme), 'Noto Color Emoji';
 }
 
 @font-face {
@@ -145,7 +147,6 @@ html.dark #scroll-up-button-image {
     font-style: normal;
     font-display: swap;
 }
-
 
 /* width */
 ::-webkit-scrollbar {
