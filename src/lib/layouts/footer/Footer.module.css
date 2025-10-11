@@ -9,7 +9,7 @@
   border-top: 1px solid var(--bg-color-40);
 }
 
-.footerContent{
+.footerContent {
   width: 100%;
   height: 100%;
   display: flex;
@@ -18,7 +18,7 @@
   align-items: center;
 }
 
-.footerContent p {
+.footerContent span {
   margin-top: calc(var(--footer-height) / 2 - 1.5rem);
   flex-grow: 1;
 }

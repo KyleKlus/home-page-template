@@ -197,7 +197,6 @@ a,
     cursor: pointer;
 }
 
-button,
 .buttonClass {
     border: 0;
     outline: 1px solid var(--bg-color-30);
@@ -208,9 +207,6 @@ button,
     transition: background 250ms ease;
 }
 
-input[type=text],
-textarea,
-input[type=password],
 .textboxClass {
     padding: 8px;
     border-radius: 5px;
@@ -220,26 +216,23 @@ input[type=password],
     outline: none;
 }
 
-input[type=text]:focus-within,
-textarea:focus-within,
-input[type=password]:focus-within,
 .textboxClass:focus-within {
     border-color: var(--bg-color-60);
     background: var(--bg-color-05);
 }
 
-a {
+.linkClass {
     text-decoration: none;
     color: var(--color-accent-10);
     box-shadow: 0px 1px 0px var(--color-accent-10);
     width: fit-content;
 }
 
-ul li {
+ul .listItemClass {
     margin: 1rem 0 1rem 1rem;
 }
 
-ol li {
+ol .listItemClass {
     margin: 1rem 0 1rem 2rem;
 }
 
@@ -253,6 +246,10 @@ ol li {
 
 .applyHeaderOffset {
     padding-top: var(--header-height);
+}
+
+.applyBottomPadding {
+    padding-bottom: 5rem;
 }
 
 .accent-marker {
@@ -291,7 +288,6 @@ ol li {
     right: 0px;
     visibility: hidden;
     transform: scale(0);
-    /* transform-origin: 0 50%; */
     transition: transform 200ms ease;
 }
 
@@ -363,11 +359,6 @@ ol li {
             var(--cross-pos-w) var(--cross-pos-h),
             var(--cross-pos-w) var(--cross-pos-h);
     }
-
-
-    /* to {
-    background-position: calc(var(--cross-position) - 100vh) calc(var(--cross-position) - 100vw), calc(-100vh - var(--cross-arm-width)) calc(-100vw - var(--cross-arm-width)), calc(-100vh - var(--cross-arm-width)) calc(-100vw - var(--cross-arm-width));
-  } */
 }
 
 .dotted {
@@ -546,22 +537,18 @@ ol li {
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
 
-    a:hover,
-    a:focus-visible {
+    .linkClass:hover,
+    .linkClass:focus-visible {
         color: var(--color-accent-00);
         box-shadow: 0px 1px 0px var(--color-accent-00);
     }
 
-    button:hover,
     .buttonClass:hover {
         background: var(--bg-color-10);
         box-shadow: var(--shadowElevation_3);
         outline: 1.5px solid var(--bg-color-40);
     }
 
-    input[type=text]:not(:focus-within):hover,
-    textarea:not(:focus-within):hover,
-    input[type=password]:not(:focus-within):hover,
     .textboxClass:not(:focus-within):hover {
         border-color: var(--bg-color-50);
     }

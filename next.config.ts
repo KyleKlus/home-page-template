@@ -8,9 +8,9 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   basePath: '',
   output: 'export',
-  images: { unoptimized: true },
-  env: {
-    basePath: '',
+  images: {
+    unoptimized: true,
+    qualities: [100],
   },
 };
 

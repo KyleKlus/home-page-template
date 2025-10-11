@@ -1,19 +1,9 @@
 /** @format */
-
-import Content from "@/lib/container/Content";
-
 import type { Metadata, Viewport } from 'next'
+import { defaultSiteConfig } from "./defaultSiteConfig";
+import Content from '@/lib/container/Content';
 
-export const metadata: Metadata = {
-    title: "Kyle Klus | Website 🚀",
-    description: "Website of Kyle Klus.",
-    openGraph: {
-        type: "website",
-        url: "https://kyleklus.de/",
-        title: "Kyle Klus | Website",
-        description: "Website of Kyle Klus.",
-    },
-}
+export const metadata: Metadata = { ...defaultSiteConfig.metadata.en };
 
 export const viewport: Viewport = {
     width: "device-width",
@@ -22,10 +12,7 @@ export const viewport: Viewport = {
 
 export default function Page() {
     return (
-        <>
-            <Content className={['applyHeaderOffset', 'dotted'].join(' ')}>
-                {/* Insert stuff here */}
-            </Content>
-        </>
+        <Content className={['dotted', 'applyHeaderOffset', 'applyBottomPadding'].join(' ')}>
+        </Content>
     );
 }

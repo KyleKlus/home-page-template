@@ -1,7 +1,8 @@
 /** @format */
+import { defaultSiteConfig } from '@/app/defaultSiteConfig';
 import styles from './SideNavigation.module.css';
 import Card from '@/lib/container/Card';
-import ScrollNavLink from '@/lib/interaction/links/ScrollNavLink';
+import NavLink from '@/lib/interaction/links/NavLink';
 
 interface ISideNavigationProps {
   isActive: boolean;
@@ -11,26 +12,22 @@ export default function SideNavigation(
 ) {
   const isActiveClassName = props.isActive ? styles.isActive : styles.isDisabled;
 
-
   return (
     <nav className={[styles.sideNavMenu, isActiveClassName, 'shadowElevation_5'].join(' ')}>
       <Card className={[styles.menuCard].join(' ')}>
         <h4>Main Site</h4>
-        <ScrollNavLink
+        <NavLink
           className={styles.sideNavLink}
-          elementName="/#heroPage"
-          displayText="Home"
-        />
-        <ScrollNavLink
+          href={defaultSiteConfig.heropageUrl}
+        >Home</NavLink>
+        <NavLink
           className={styles.sideNavLink}
-          elementName="/#portfolioPage"
-          displayText="Portfolio"
-        />
-        <ScrollNavLink
+          href={defaultSiteConfig.portfoliopageUrl}
+        >Portfolio</NavLink>
+        <NavLink
           className={styles.sideNavLink}
-          elementName="/#aboutPage"
-          displayText="About"
-        />
+          href={defaultSiteConfig.aboutpageUrl}
+        >About</NavLink>
       </Card>
       {props.children}
     </nav>

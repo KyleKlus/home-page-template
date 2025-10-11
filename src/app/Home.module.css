@@ -1,0 +1,30 @@
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {}
+
+@media (prefers-reduced-motion) {}
+
+/* Mobile */
+@media (max-width: 900px) {}
+
+@media (max-width: 800px) {}
+
+@media (max-width: 750px) {}
+
+@media (max-width: 700px) {}
+
+@media (max-width: 610px) {}
+
+
+
+@media (max-width: 520px) {}
+
+@media (max-width: 470px) {}
+
+@media (max-width: 400px) {}
+
+@media (max-width: 370px) {}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 601px) and (max-width: 1120px) {}
+
+@media (prefers-color-scheme: dark) {}
