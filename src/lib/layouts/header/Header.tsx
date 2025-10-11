@@ -23,36 +23,29 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
   const [isHeaderHidden, setIsHeaderHidden] = useState(true);
   const lastScroll = useRef(0);
 
-  const isHeaderHiddenClassName = useRef('');
-
   const isActiveClassName = isSideNavigationActive
     ? styles.isWrapperActive
     : '';
 
   function hideAndShowHeader() {
-    let slideInClass = ' ' + styles.slideIn;
-    let scrollDownClass = styles.isHidden;
-
-    if (isSideNavigationActive) { slideInClass = ''; scrollDownClass = [styles.isVisible].join(' '); }
     const currentScrollPos = window.pageYOffset;
     const lastScrollPos = lastScroll.current;
     lastScroll.current = currentScrollPos;
 
     if (currentScrollPos <= 64) {
-      isHeaderHiddenClassName.current = '';
-
-      setIsHeaderHidden(false);
-    } else if (currentScrollPos < lastScrollPos) {
-      // up
-      isHeaderHiddenClassName.current = [styles.isVisible].join(' ');
-
-      setIsHeaderHidden(false);
-    } else if (currentScrollPos > lastScrollPos) {
-      // down
-      isHeaderHiddenClassName.current = [styles.isVisible].join(' ');
       setIsHeaderHidden(true);
+    } else if (currentScrollPos < lastScrollPos || currentScrollPos > lastScrollPos) {
+      // up & down
+      setIsHeaderHidden(false);
     }
   }
+
+  useEffect(() => {
+    window.addEventListener('scroll', hideAndShowHeader);
+    return () => {
+      window.removeEventListener('scroll', hideAndShowHeader);
+    };
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', hideAndShowHeader);
@@ -63,7 +56,7 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
 
   return (
     <div>
-      <header className={[styles.header, isHeaderHiddenClassName.current].join(' ')}>
+      <header className={[styles.header, isHeaderHidden ? '' : styles.isVisible].join(' ')}>
         <div className={styles.headerLeft}>
           <div
             className={
@@ -86,18 +79,9 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
             isActive={isSideNavigationActive}
             onClick={() => {
               setIsSideNavigationActive(!isSideNavigationActive);
-              if (!isSideNavigationActive) {
-                isHeaderHiddenClassName.current = isHeaderHiddenClassName.current;
-                setIsHeaderHidden(false);
-              } else {
-                const currentScrollPos = window.pageYOffset;
-
-                isHeaderHiddenClassName.current = currentScrollPos <= 64 ? '' : styles.isVisible
-              }
             }}
           />
         </HeaderNavigation>
-
       </header>
       <SideNavigation isActive={isSideNavigationActive}>
         {props.overrideSideNavContent
