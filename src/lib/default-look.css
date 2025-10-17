@@ -7,8 +7,8 @@
         'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
         'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-    --header-height: 64px;
-    --footer-height: 144px;
+    --header-height: 96px;
+    --footer-height: 160px;
     --sideNav-width: 300px;
 
     --font-interface-theme: 'Fira Code';
@@ -375,8 +375,8 @@ ol .listItemClass {
 
     background-image:
         radial-gradient(circle, transparent var(--cross-width), var(--bg-color-05) var(--cross-width)),
-        linear-gradient(var(--bg-color-50) var(--cross-arm-width), transparent var(--cross-arm-width)),
-        linear-gradient(90deg, var(--bg-color-50) var(--cross-arm-width), transparent var(--cross-arm-width));
+        linear-gradient(var(--bg-color-60) var(--cross-arm-width), transparent var(--cross-arm-width)),
+        linear-gradient(90deg, var(--bg-color-60) var(--cross-arm-width), transparent var(--cross-arm-width));
     background-size: var(--spacing) var(--spacing);
     background-position:
         var(--circle-pos-w) var(--circle-pos-h),
