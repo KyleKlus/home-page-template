@@ -65,5 +65,5 @@
         var(--cross-pos-w) var(--cross-pos-h),
         var(--cross-pos-w) var(--cross-pos-h);
     background-repeat: repeat;
-    animation: slide-out-crossedBG 60s linear infinite;
+    animation: slide-out-crossed-bg 60s linear infinite;
 }
