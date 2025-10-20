@@ -11,7 +11,7 @@ interface IScrollToTargetButtonProps {
 }
 
 export default function ScrollToTargetButton(
-  props: React.PropsWithChildren<IScrollToTargetButtonProps>
+  props: IScrollToTargetButtonProps
 ) {
   const [isVisible, setIsVisible] = useState(false);
   const lastScroll = useRef(0);
@@ -61,7 +61,6 @@ export default function ScrollToTargetButton(
         width={22}
         height={22}
       />
-      {props.children}
     </button>
   );
 }

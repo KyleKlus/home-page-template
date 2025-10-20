@@ -1,9 +1,9 @@
 /** @format */
 
 .card {
-  border: 1px solid var(--bg-color-50);
+  border: var(--border);
   border-radius: var(--border-radius);
-  background-color: var(--bg-color-10);
+  background-color: var(--bg-tertiary);
   padding: 16px;
 
   display: flex;

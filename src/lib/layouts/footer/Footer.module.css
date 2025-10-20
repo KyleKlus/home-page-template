@@ -5,9 +5,9 @@
   height: var(--footer-height);
   width: 100%;
   padding: 1rem;
-  background-color: var(--bg-color-10);
+  background-color: var(--bg-tertiary);
   z-index: 20;
-  border-top: 1px solid var(--bg-color-40);
+  border-top: var(--border-light);
 }
 
 .footerContent {

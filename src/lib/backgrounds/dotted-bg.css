@@ -1,0 +1,103 @@
+@keyframes slide-out-dotted {
+    from {
+        background-size: var(--dotted-spacing) var(--dotted-spacing);
+        background-position:
+            var(--default-dot-pos-w) var(--default-dot-pos-h);
+    }
+
+    25% {
+        --dotted-spacing-25: calc(var(--dotted-spacing) + 1rem);
+        --dotted-length-25: calc(var(--dotted-spacing-25) + var(--dot-width));
+        background-size: var(--dotted-spacing-25) var(--dotted-spacing-25);
+        background-position:
+            calc(calc(80vw - var(--dotted-length-25)) / 2) calc(calc(70vh - var(--dotted-length-25)) / 2),
+            calc(calc(80vw + var(--dot-half-width)) / 2) calc(calc(70vh + var(--dot-half-width)) / 2),
+            calc(calc(80vw + var(--dot-half-width)) / 2) calc(calc(70vh + var(--dot-half-width)) / 2);
+    }
+
+    60% {
+        --dotted-spacing-60: calc(var(--dotted-spacing) + 1.5rem);
+        --dotted-length-60: calc(var(--dotted-spacing-60) + var(--dot-width));
+        background-size: var(--dotted-spacing-60) var(--dotted-spacing-60);
+        background-position:
+            calc(calc(90vw - var(--dotted-length-60)) / 2) calc(calc(80vh - var(--dotted-length-60)) / 2),
+            calc(calc(90vw + var(--dot-half-width)) / 2) calc(calc(80vh + var(--dot-half-width)) / 2),
+            calc(calc(90vw + var(--dot-half-width)) / 2) calc(calc(80vh + var(--dot-half-width)) / 2);
+    }
+
+    80% {
+        --dotted-spacing-80: calc(var(--dotted-spacing) + 1rem);
+        --dotted-length-80: calc(var(--dotted-spacing-80) + var(--dot-width));
+        background-size: var(--dotted-spacing-80) var(--dotted-spacing-80);
+        background-position:
+            calc(calc(80vw - var(--dotted-length-80)) / 2) calc(calc(90vh - var(--dotted-length-80)) / 2),
+            calc(calc(80vw + var(--dot-half-width)) / 2) calc(calc(90vh + var(--dot-half-width)) / 2),
+            calc(calc(80vw + var(--dot-half-width)) / 2) calc(calc(90vh + var(--dot-half-width)) / 2);
+    }
+
+    to {
+        background-size: var(--dotted-spacing) var(--dotted-spacing);
+        background-position:
+            var(--default-dot-pos-w) var(--default-dot-pos-h);
+    }
+}
+
+.dottedSmall {
+    --dot-width: 0.08rem;
+    --dot-half-width: var(--dot-width) / 2;
+    --dotted-spacing: 2rem;
+    --dotted-length: calc(var(--dotted-spacing) + var(--dot-width));
+
+    ---default-dot-pos-w: calc(calc(100vw - var(--dotted-length)) / 2);
+    --dot-pos-w: var(--default-dot-pos-w);
+    --default-dot-pos-h: calc(calc(100vh - var(--dotted-length)) / 2);
+    --dot-pos-h: var(--default-dot-pos-h);
+
+    background-image:
+        radial-gradient(circle, var(--bg-color-60) var(--dot-width), var(--bg-secondary) var(--dot-width));
+    background-size: var(--dotted-spacing) var(--dotted-spacing);
+    background-position:
+        var(--dot-pos-w) var(--dot-pos-h);
+    background-repeat: repeat;
+    animation: slide-out-dotted 90s linear infinite;
+}
+
+.dottedSmallThick {
+    --dot-width: 0.16rem;
+    --dot-half-width: var(--dot-width) / 2;
+    --dotted-spacing: 2rem;
+    --dotted-length: calc(var(--dotted-spacing) + var(--dot-width));
+
+    ---default-dot-pos-w: calc(calc(100vw - var(--dotted-length)) / 2);
+    --dot-pos-w: var(--default-dot-pos-w);
+    --default-dot-pos-h: calc(calc(100vh - var(--dotted-length)) / 2);
+    --dot-pos-h: var(--default-dot-pos-h);
+
+    background-image:
+        radial-gradient(circle, var(--bg-color-60) var(--dot-width), var(--bg-secondary) var(--dot-width));
+    background-size: var(--dotted-spacing) var(--dotted-spacing);
+    background-position:
+        var(--dot-pos-w) var(--dot-pos-h);
+    background-repeat: repeat;
+    animation: slide-out-dotted 90s linear infinite;
+}
+
+.dotted {
+    --dot-width: 0.1rem;
+    --dot-half-width: var(--dot-width) / 2;
+    --dotted-spacing: 6.5rem;
+    --dotted-length: calc(var(--dotted-spacing) + var(--dot-width));
+
+    ---default-dot-pos-w: calc(calc(100vw - var(--dotted-length)) / 2);
+    --dot-pos-w: var(--default-dot-pos-w);
+    --default-dot-pos-h: calc(calc(100vh - var(--dotted-length)) / 2);
+    --dot-pos-h: var(--default-dot-pos-h);
+
+    background-image:
+        radial-gradient(circle, var(--bg-color-60) var(--dot-width), var(--bg-secondary) var(--dot-width));
+    background-size: var(--dotted-spacing) var(--dotted-spacing);
+    background-position:
+        var(--dot-pos-w) var(--dot-pos-h);
+    background-repeat: repeat;
+    animation: slide-out-dotted 90s linear infinite;
+}

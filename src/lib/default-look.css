@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+@import './backgrounds/dotted-bg.css';
+@import './backgrounds/crossed-bg.css';
 
 :root {
     --max-width: 1100px;
@@ -23,6 +25,13 @@ html {
     --shadowElevation_3: 0 2px 4px hsla(0, 0%, 0%, 0.12);
     --shadowElevation_4: 0 3px 6px hsla(0, 0%, 0%, 0.12);
     --shadowElevation_5: 0 4px 8px hsla(0, 0%, 0%, 0.12);
+
+    --shadow-00: var(--shadowElevation_0);
+    --shadow-05: var(--shadowElevation_1);
+    --shadow-10: var(--shadowElevation_2);
+    --shadow-20: var(--shadowElevation_3);
+    --shadow-30: var(--shadowElevation_4);
+    --shadow-40: var(--shadowElevation_5);
 
     --interaction-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.3);
     --interaction-shadow-hover: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
@@ -98,6 +107,10 @@ html {
             var(--bg-color-s),
             calc(var(--bg-color-l) + calc(18% * var(--bg-color-multiplier))));
 
+    --bg-color-45: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(22% * var(--bg-color-multiplier))));
+
     --bg-color-50: hsl(var(--bg-color-h),
             var(--bg-color-s),
             calc(var(--bg-color-l) + calc(25% * var(--bg-color-multiplier))));
@@ -105,6 +118,10 @@ html {
     --bg-color-60: hsl(var(--bg-color-h),
             var(--bg-color-s),
             calc(var(--bg-color-l) + calc(30% * var(--bg-color-multiplier))));
+
+    --bg-color-65: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(35% * var(--bg-color-multiplier))));
 
     --bg-color-70: hsl(var(--bg-color-h),
             var(--bg-color-s),
@@ -117,6 +134,47 @@ html {
     --bg-color-90: hsl(var(--bg-color-h),
             var(--bg-color-s),
             calc(var(--bg-color-l) + calc(95% * var(--bg-color-multiplier))));
+
+    --border-color: var(--bg-color-65);
+    --border-light-color: var(--bg-color-45);
+    --border-dark-color: var(--bg-color-80);
+
+    --border: 1px solid var(--border-color);
+    --border-light: 1px solid var(--border-light-color);
+    --border-dark: 1px solid var(--border-dark-color);
+
+    --button-border-color: var(--border-light-color);
+    --button-hover-border-color: var(--border-color);
+    --button-disabled-border-color: var(--border-dark-color);
+
+    --button-border: 1px solid var(--button-border-color);
+    --button-hover-border: 1px solid var(--button-hover-border-color);
+    --button-disabled-border: 1px solid var(--button-disabled-border-color);
+
+    --button-background-color: var(--bg-primary);
+    --button-hover-background-color: var(--bg-secondary);
+    --button-disabled-background-color: var(--bg-tertiary);
+
+    --bg-primary: var(--bg-color-00);
+    --bg-secondary: var(--bg-color-05);
+    --bg-tertiary: var(--bg-color-10);
+
+    --bg-primary-translucent: var(--bg-color-translucent-00);
+    --bg-secondary-translucent: var(--bg-color-translucent-05);
+    --bg-tertiary-translucent: var(--bg-color-translucent-10);
+
+    --bg-primary-hover: var(--bg-color-05);
+    --bg-secondary-hover: var(--bg-color-10);
+    --bg-tertiary-hover: var(--bg-color-15);
+
+    --bg-primary-translucent-hover: var(--bg-color-translucent-05);
+    --bg-secondary-translucent-hover: var(--bg-color-translucent-10);
+    --bg-tertiary-translucent-hover: var(--bg-color-translucent-15);
+
+    --text-color: var(--bg-color-90);
+    --text-faint-color: var(--bg-color-60);
+    --text-muted-color: var(--bg-color-40);
+    --text-disabled-color: var(--bg-color-20);
 }
 
 html.dark {
@@ -135,7 +193,7 @@ html.dark #scroll-up-button-image {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    color: var(--bg-color-90);
+    color: var(--text-color);
     font-family: var(--font-interface-theme), 'Noto Color Emoji';
 }
 
@@ -176,14 +234,14 @@ html.dark #scroll-up-button-image {
 
 html,
 body {
-    background-color: var(--bg-color-05);
+    background-color: var(--bg-secondary);
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
     scroll-padding-block-end: var(--footer-height);
 }
 
 hr {
-    border: 0.75px solid var(--bg-color-60);
+    border: var(--border);
     border-radius: 1px;
 }
 
@@ -198,28 +256,22 @@ a,
     cursor: pointer;
 }
 
-.buttonClass {
-    border: 0;
-    outline: 1px solid var(--bg-color-30);
+.buttonClass,
+.textboxClass {
+    outline: none;
+    border: var(--button-border);
     border-radius: 5px;
     padding: 8px;
-    background: var(--bg-color-00);
-    box-shadow: var(--shadowElevation_3);
+    background: var(--button-background-color);
+    box-shadow: var(--shadow-30);
     transition: background 250ms ease;
 }
 
-.textboxClass {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid var(--bg-color-30);
-    background: var(--bg-color-00);
-    box-shadow: var(--shadowElevation_3);
-    outline: none;
-}
-
-.textboxClass:focus-within {
-    border-color: var(--bg-color-60);
-    background: var(--bg-color-05);
+.textboxClass:focus-within,
+.buttonClass:active,
+.activeButtonClass {
+    border-color: var(--button-hover-border-color);
+    background: var(--button-hover-background-color);
 }
 
 .linkClass {
@@ -250,7 +302,7 @@ ol .listItemClass {
 }
 
 .applyBottomPadding {
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
 }
 
 .accent-marker {
@@ -314,76 +366,6 @@ ol .listItemClass {
 
 .shadowElevation_5 {
     box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.12);
-}
-
-@keyframes slide-out-dotted {
-    from {
-        --circle-pos-w: calc(calc(100vw - 6.5rem + var(--cross-width)) / 2);
-        --circle-pos-h: calc(calc(100vh - 6.5rem + var(--cross-width)) / 2);
-        background-size: 6.5rem 6.5rem;
-        background-position:
-            var(--circle-pos-w) var(--circle-pos-h),
-            var(--cross-pos-w) var(--cross-pos-h),
-            var(--cross-pos-w) var(--cross-pos-h);
-    }
-
-    25% {
-        background-size: 7rem 7rem;
-        background-position:
-            calc(calc(80vw - 7rem + var(--cross-width)) / 2) calc(calc(70vh - 7rem + var(--cross-width)) / 2),
-            calc(calc(80vw + var(--cross-arm-width)) / 2) calc(calc(70vh + var(--cross-arm-width)) / 2),
-            calc(calc(80vw + var(--cross-arm-width)) / 2) calc(calc(70vh + var(--cross-arm-width)) / 2);
-    }
-
-    60% {
-        background-size: 7.5rem 7.5rem;
-        background-position:
-            calc(calc(90vw - 7.5rem + var(--cross-width)) / 2) calc(calc(80vh - 7.5rem + var(--cross-width)) / 2),
-            calc(calc(90vw + var(--cross-arm-width)) / 2) calc(calc(80vh + var(--cross-arm-width)) / 2),
-            calc(calc(90vw + var(--cross-arm-width)) / 2) calc(calc(80vh + var(--cross-arm-width)) / 2);
-    }
-
-    80% {
-        background-size: 7rem 7rem;
-        background-position:
-            calc(calc(80vw - 7rem + var(--cross-width)) / 2) calc(calc(90vh - 7rem + var(--cross-width)) / 2),
-            calc(calc(80vw + var(--cross-arm-width)) / 2) calc(calc(90vh + var(--cross-arm-width)) / 2),
-            calc(calc(80vw + var(--cross-arm-width)) / 2) calc(calc(90vh + var(--cross-arm-width)) / 2);
-    }
-
-    to {
-        --circle-pos-w: calc(calc(100vw - 6.5rem + var(--cross-width)) / 2);
-        --circle-pos-h: calc(calc(100vh - 6.5rem + var(--cross-width)) / 2);
-        background-size: 6.5rem 6.5rem;
-        background-position:
-            var(--circle-pos-w) var(--circle-pos-h),
-            var(--cross-pos-w) var(--cross-pos-h),
-            var(--cross-pos-w) var(--cross-pos-h);
-    }
-}
-
-.dotted {
-    --cross-arm-width: .08rem;
-    --cross-width: calc(var(--cross-arm-width)*2);
-    --spacing: 6.5rem;
-
-    --circle-pos-w: calc(calc(100vw - var(--spacing) + var(--cross-width)) / 2);
-    --circle-pos-h: calc(calc(100vh - var(--spacing) + var(--cross-width)) / 2);
-
-    --cross-pos-w: calc(calc(100vw + var(--cross-arm-width)) / 2);
-    --cross-pos-h: calc(calc(100vh + var(--cross-arm-width)) / 2);
-
-    background-image:
-        radial-gradient(circle, transparent var(--cross-width), var(--bg-color-05) var(--cross-width)),
-        linear-gradient(var(--bg-color-60) var(--cross-arm-width), transparent var(--cross-arm-width)),
-        linear-gradient(90deg, var(--bg-color-60) var(--cross-arm-width), transparent var(--cross-arm-width));
-    background-size: var(--spacing) var(--spacing);
-    background-position:
-        var(--circle-pos-w) var(--circle-pos-h),
-        var(--cross-pos-w) var(--cross-pos-h),
-        var(--cross-pos-w) var(--cross-pos-h);
-    background-repeat: repeat;
-    animation: slide-out-dotted 60s linear infinite;
 }
 
 .leftHeading {
@@ -545,13 +527,13 @@ ol .listItemClass {
     }
 
     .buttonClass:hover {
-        background: var(--bg-color-10);
-        box-shadow: var(--shadowElevation_3);
-        outline: 1.5px solid var(--bg-color-40);
+        background: var(--button-hover-background-color);
+        box-shadow: var(--shadow-20);
+        border-color: var(--button-hover-border-color);
     }
 
     .textboxClass:not(:focus-within):hover {
-        border-color: var(--bg-color-50);
+        border-color: var(--button-hover-border-color);
     }
 
     .hoverBGEffect:hover {

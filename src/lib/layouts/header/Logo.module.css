@@ -19,7 +19,7 @@
 
 .logoWrapper > img {
   border-radius: 50%;
-  outline: 1px solid var(--bg-color-40);
+  border: var(--border-light);
 }
 
 /* Enable hover only on non-touch devices */

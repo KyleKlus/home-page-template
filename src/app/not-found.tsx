@@ -7,7 +7,7 @@ export const metadata: Metadata = { ...defaultSiteConfig.metadata.en };
 
 function Page() {
   return (
-    <Content className={['applyHeaderOffset', 'dotted'].join(' ')} style={{ justifyContent: 'center' }}>
+    <Content className={['applyHeaderOffset', 'crossed'].join(' ')} style={{ justifyContent: 'center' }}>
       <div style={{ maxWidth: 'clamp(200px, 80%, 600px)', padding: '50px', minHeight: '300px' }}>
         <center>
           <h2>404 - Page Not Found</h2>

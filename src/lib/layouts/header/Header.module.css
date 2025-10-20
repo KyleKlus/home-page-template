@@ -57,10 +57,10 @@
 }
 
 .header.isVisible {
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(5px);
   background-color: var(--bg-color-translucent-05);
-  border-bottom: 1px solid var(--bg-color-40);
-  box-shadow: var(--shadowElevation_4);
+  border-bottom-color: var(--border-light-color);
+  box-shadow: var(--shadow-40);
 }
 
 .header.isHidden {
@@ -106,12 +106,11 @@
 
 /* Mobile */
 @media (max-width: 600px) {
-
   .header {
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(5px);
     background-color: var(--bg-color-translucent-05);
-    border-bottom: 1px solid var(--bg-color-40);
-    box-shadow: var(--shadowElevation_4);
+    border-bottom-color: var(--border-light-color);
+    box-shadow: var(--shadowS-40);
   }
 
   .headerNavLink {

@@ -12,7 +12,7 @@ export const viewport: Viewport = {
 
 export default function Page() {
     return (
-        <Content className={['dotted', 'applyHeaderOffset', 'applyBottomPadding'].join(' ')}>
+        <Content className={['crossed', 'applyHeaderOffset', 'applyBottomPadding'].join(' ')}>
         </Content>
     );
 }

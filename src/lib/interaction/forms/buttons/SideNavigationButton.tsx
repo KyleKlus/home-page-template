@@ -7,18 +7,18 @@ interface ISideNavigationButtonProps {
 }
 
 export default function SideNavigationButton(
-  props: React.PropsWithChildren<ISideNavigationButtonProps>
+  props: ISideNavigationButtonProps
 ) {
-  const isActiveClassName = props.isActive ? styles.isActive : styles.isDisabled;
   return (
     <div
-      className={[styles.sideNav, 'buttonClass', isActiveClassName].join(' ')}
+      className={[styles.sideNav, 'buttonClass', props.isActive ? `${styles.isActive} activeButtonClass` : ''].join(' ')}
       onClick={props.onClick}
     >
-      <span className={styles.bar}></span>
-      <span className={styles.bar}></span>
-      <span className={styles.bar}></span>
-      {props.children}
+      <div className={styles.barContainer}>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+      </div>
     </div>
   );
 }

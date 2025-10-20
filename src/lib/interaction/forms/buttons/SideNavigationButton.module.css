@@ -6,6 +6,16 @@
   --button-padding: 4px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: var(--toggle-width);
+  height: var(--toggle-height);
+  border-radius: 50% !important;
+}
+
+.barContainer {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2px;
@@ -13,19 +23,27 @@
   line-height: 1;
   width: var(--toggle-width);
   height: var(--toggle-height);
-  border-radius: 50% !important;
-  cursor: pointer;
   padding: var(--button-padding) !important;
   transition: transform 250ms ease, gap 250ms ease, background-color 250ms ease;
 }
 
 .bar {
   display: block;
-  background-color: var(--bg-color-90);
+  background-color: var(--text-color);
   height: 2px;
   width: calc(100% - var(--button-padding));
   border-radius: 3px;
   transition: border-radius 250ms ease, width 250ms ease, height 250ms ease;
+}
+
+.sideNav .isActive {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color)
+}
+
+.isActive .barContainer {
+  transform: rotate(90deg);
+  gap: 4px;
 }
 
 .isActive .bar {
@@ -34,22 +52,8 @@
   border-radius: 50%;
 }
 
-.isActive {
-  transform: rotate(90deg);
-  gap: 4px;
-}
-
-.isDisabled {
-  transform: unset;
-}
-
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .sideNav:hover {
-    background: var(--bg-color-15);
-    outline: 1px solid var(--bg-color-40);
-  }
-}
+@media (hover: hover) and (pointer: fine) {}
 
 @media (prefers-reduced-motion) {}
 
