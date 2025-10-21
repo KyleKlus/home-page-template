@@ -1,0 +1,18 @@
+/** @format */
+.smallFooter {
+  height: var(--footer-height);
+}
+
+@media (prefers-reduced-motion) {}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .smallFooter {
+    height: unset;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {}
+
+@media (prefers-color-scheme: dark) {}

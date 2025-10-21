@@ -2,12 +2,12 @@ import Image from 'next/image';
 
 import styles from './Logo.module.css';
 import logo from './KK_Logo.svg'
-import { defaultSiteConfig } from '@/app/defaultSiteConfig';
+import { siteConfig } from '@/app/siteConfig';
 
 export default function Logo() {
   return (
     <a
-      href={defaultSiteConfig.url}
+      href={siteConfig.url}
       className={[styles.logoWrapper].join(' ')}
     >
       <Image

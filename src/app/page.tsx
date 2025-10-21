@@ -1,9 +1,9 @@
 /** @format */
 import type { Metadata, Viewport } from 'next'
-import { defaultSiteConfig } from "./defaultSiteConfig";
+import { siteConfig } from "./siteConfig";
 import Content from '@/lib/container/Content';
 
-export const metadata: Metadata = { ...defaultSiteConfig.metadata.en };
+export const metadata: Metadata = { ...siteConfig.metadata.en };
 
 export const viewport: Viewport = {
     width: "device-width",

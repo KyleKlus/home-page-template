@@ -2,7 +2,6 @@
 
 .footer {
   flex-grow: 0;
-  height: var(--footer-height);
   width: 100%;
   padding: 1rem;
   background-color: var(--bg-tertiary);
@@ -54,7 +53,6 @@
 @media (max-width: 700px) {
   .footer {
     flex-grow: 1;
-    height: unset;
   }
 }
 

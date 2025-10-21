@@ -1,5 +1,5 @@
 /** @format */
-import { defaultSiteConfig } from '@/app/defaultSiteConfig';
+import { siteConfig } from '@/app/siteConfig';
 import styles from './SideNavigation.module.css';
 import Card from '@/lib/container/Card';
 import NavLink from '@/lib/interaction/links/NavLink';
@@ -18,15 +18,15 @@ export default function SideNavigation(
         <h4>Main Site</h4>
         <NavLink
           className={styles.sideNavLink}
-          href={defaultSiteConfig.heropageUrl}
+          href={siteConfig.heropageUrl}
         >Home</NavLink>
         <NavLink
           className={styles.sideNavLink}
-          href={defaultSiteConfig.portfoliopageUrl}
+          href={siteConfig.portfoliopageUrl}
         >Portfolio</NavLink>
         <NavLink
           className={styles.sideNavLink}
-          href={defaultSiteConfig.aboutpageUrl}
+          href={siteConfig.aboutpageUrl}
         >About</NavLink>
       </Card>
       {props.children}

@@ -10,7 +10,7 @@ import NavLink from '@/lib/interaction/links/NavLink';
 import HeaderNavigation from '@/lib/layouts/header/HeaderNavigation';
 import Logo from '@/lib/layouts/header/Logo';
 import SideNavigation from '@/lib/layouts/header/SideNavigation';
-import { defaultSiteConfig } from '@/app/defaultSiteConfig';
+import { siteConfig } from '@/app/siteConfig';
 
 interface IHeaderProps {
   overrideSideNavContent?: React.ReactNode,
@@ -91,19 +91,19 @@ export default function Header(props: React.PropsWithChildren<IHeaderProps>) {
               <h4>Other Sites</h4>
               <NavLink
                 className={sideNavStyles.sideNavLink}
-                href={defaultSiteConfig.projectsUrl}
+                href={siteConfig.projectsUrl}
               >Projects 🛠️</NavLink>
               <NavLink
                 className={sideNavStyles.sideNavLink}
-                href={defaultSiteConfig.cookbookENUrl}
+                href={siteConfig.cookbookENUrl}
               >Cookbook 🧑‍🍳 🇬🇧</NavLink>
               <NavLink
                 className={sideNavStyles.sideNavLink}
-                href={defaultSiteConfig.cookbookDEUrl}
+                href={siteConfig.cookbookDEUrl}
               >Cookbook 🧑‍🍳 🇩🇪</NavLink>
               <NavLink
                 className={sideNavStyles.sideNavLink}
-                href={defaultSiteConfig.receiptManagerUrl}
+                href={siteConfig.receiptManagerUrl}
               >Receipt Manager 🧾</NavLink>
               {props.addSideNavChildren !== undefined && props.addSideNavChildren.map((child) => {
                 return child;

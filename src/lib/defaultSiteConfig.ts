@@ -21,7 +21,7 @@ const metadataEn = {
     description: "Website of Kyle Klus.",
     openGraph: {
         type: "website",
-        url: `${url}${basePath}`,
+        url: url,
         title: "Kyle Klus | Website",
         description: "Website of Kyle Klus.",
     },

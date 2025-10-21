@@ -1,9 +1,9 @@
 /** @format */
 import Content from '@/lib/container/Content';
 import { Metadata } from 'next';
-import { defaultSiteConfig } from './defaultSiteConfig';
+import { siteConfig } from './siteConfig';
 
-export const metadata: Metadata = { ...defaultSiteConfig.metadata.en };
+export const metadata: Metadata = { ...siteConfig.metadata.en };
 
 function Page() {
   return (
