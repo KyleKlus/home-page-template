@@ -27,3 +27,8 @@
     background-size: 200px 200px;
     filter: brightness(1.2);
 }
+
+html.dark .grainy-coarse-bg::before,
+html.dark .grainy-fine-bg::before {
+    filter: contrast(3) brightness(.25);
+}
