@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import styles from './Logo.module.css';
 import logo from './KK_Logo.svg'
-import { siteConfig } from '@/app/siteConfig';
+import { siteConfig } from '@/siteConfig';
 
 export default function Logo() {
   return (

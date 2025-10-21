@@ -14,7 +14,7 @@ import ThemeButton from '@/lib/interaction/forms/buttons/ThemeButton';
 import { ThemeProvider } from '@/lib/provider/theme-provider';
 import ScrollToTargetButton from '@/lib/interaction/forms/buttons/ScrollToTargetButton';
 import NavLink from '@/lib/interaction/links/NavLink';
-import { siteConfig } from './siteConfig';
+import { siteConfig } from '../siteConfig';
 import SiteMapFooter from '@/lib/layouts/footer/SiteMapFooter';
 
 const firaCode = Fira_Code({ weight: '400', subsets: ['latin'] });

@@ -1,7 +1,7 @@
 /** @format */
 
 import styles from './Footer.module.css';
-import { siteConfig } from '@/app/siteConfig';
+import { siteConfig } from '@/siteConfig';
 import StyledLink from '@/lib/interaction/links/StyledLink';
 
 export interface IFooterProps extends React.PropsWithChildren {

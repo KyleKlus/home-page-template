@@ -1,6 +1,6 @@
 /** @format */
 
-import { siteConfig } from '@/app/siteConfig';
+import { siteConfig } from '@/siteConfig';
 import StyledLink from '@/lib/interaction/links/StyledLink';
 import BigFooter from './BigFooter';
 import styles from './SiteMapFooter.module.css';

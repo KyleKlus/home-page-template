@@ -1,6 +1,6 @@
 /** @format */
 import type { Metadata, Viewport } from 'next'
-import { siteConfig } from "./siteConfig";
+import { siteConfig } from "../siteConfig";
 import Content from '@/lib/container/Content';
 
 export const metadata: Metadata = { ...siteConfig.metadata.en };

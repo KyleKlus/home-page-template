@@ -1,5 +1,5 @@
 /** @format */
-import { siteConfig } from '@/app/siteConfig';
+import { siteConfig } from '@/siteConfig';
 import styles from './SideNavigation.module.css';
 import Card from '@/lib/container/Card';
 import NavLink from '@/lib/interaction/links/NavLink';

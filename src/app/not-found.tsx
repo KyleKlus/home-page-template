@@ -1,7 +1,7 @@
 /** @format */
 import Content from '@/lib/container/Content';
 import { Metadata } from 'next';
-import { siteConfig } from './siteConfig';
+import { siteConfig } from '../siteConfig';
 
 export const metadata: Metadata = { ...siteConfig.metadata.en };
 

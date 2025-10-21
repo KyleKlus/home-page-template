@@ -1,5 +1,6 @@
 /** @format */
 import styles from './MarkdownSection.module.css';
+import Image from 'next/image';
 
 interface IMarkdownImageProps {
   className?: string;
@@ -10,6 +11,6 @@ interface IMarkdownImageProps {
 
 export default function MarkdownImage(props: React.PropsWithChildren<IMarkdownImageProps>) {
   return <span className={[styles.markdownImage, props.className].join(' ')}>
-    <img src={props.src} alt={props.alt} title={props.title} />
+    <Image src={props.src} alt={props.alt} title={props.title} quality={100} />
   </span>;
 }

@@ -10,7 +10,7 @@ import NavLink from '@/lib/interaction/links/NavLink';
 import HeaderNavigation from '@/lib/layouts/header/HeaderNavigation';
 import Logo from '@/lib/layouts/header/Logo';
 import SideNavigation from '@/lib/layouts/header/SideNavigation';
-import { siteConfig } from '@/app/siteConfig';
+import { siteConfig } from '@/siteConfig';
 
 interface IHeaderProps {
   overrideSideNavContent?: React.ReactNode,
