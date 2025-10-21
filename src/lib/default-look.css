@@ -2,6 +2,9 @@
 @import './styles/variables.css';
 @import './styles/fonts/text-styles.css';
 @import './styles/backgrounds/dotted-bg.css';
+@import './styles/backgrounds/dot-grid-bg.css';
+@import './styles/backgrounds/blue-print-bg.css';
+@import './styles/backgrounds/grainy-bg.css';
 @import './styles/backgrounds/crossed-bg.css';
 
 * {
@@ -111,7 +114,7 @@ ol .listItemClass {
 }
 
 .applyBottomPadding {
-    padding-bottom: 8rem;
+    padding-bottom: 12rem;
 }
 
 .accent-marker {

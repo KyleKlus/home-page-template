@@ -1,0 +1,29 @@
+.grainy-coarse-bg,
+.grainy-fine-bg {
+    position: relative;
+}
+
+.grainy-coarse-bg::before,
+.grainy-fine-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.grainy-coarse-bg::before {
+    background: url(./high-noise.svg), var(--bg-color-50);
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    filter: brightness(1.2);
+}
+
+.grainy-fine-bg::before {
+    background: url(./low-noise.svg), var(--bg-color-50);
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    filter: brightness(1.2);
+}

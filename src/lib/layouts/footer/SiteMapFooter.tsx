@@ -4,7 +4,8 @@ import { siteConfig } from '@/siteConfig';
 import StyledLink from '@/lib/interaction/links/StyledLink';
 import BigFooter from './BigFooter';
 import styles from './SiteMapFooter.module.css';
-import footerStyles from './Footer.module.css';
+import Image from 'next/image';
+import logo from '@/lib/layouts/header/KK_Logo.svg';
 
 export interface ISiteMapFooterProps extends React.PropsWithChildren {
   className?: string;
@@ -12,7 +13,7 @@ export interface ISiteMapFooterProps extends React.PropsWithChildren {
 
 export default function SiteMapFooter(props: ISiteMapFooterProps) {
   return (
-    <BigFooter className={[styles.siteMapFooter, props.className].join(' ')} overrideDefaultContent={true}>
+    <BigFooter className={[styles.siteMapFooter, props.className, 'grainy-coarse-bg'].join(' ')} overrideDefaultContent={true}>
       <div className={styles.siteMapWrapper}>
         <div className={[styles.linkList].join(' ')}>
           <h5>Sites</h5>
@@ -43,6 +44,7 @@ export default function SiteMapFooter(props: ISiteMapFooterProps) {
         </div>
       </div>
       <span>
+        <Image style={{ margin: '0 4px 2px 0' }} src={logo} alt={''} width={16} height={16} />
         <StyledLink href={siteConfig.githubUrl} className={['hoverBGEffect'].join(' ')} style={{ padding: '0 2px' }}>Kyle Klus</StyledLink>
         {` © 2023-${new Date().getFullYear()}`}
       </span>
