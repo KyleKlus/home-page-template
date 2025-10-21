@@ -1,0 +1,175 @@
+:root {
+    --max-width: 1100px;
+    --border-radius: 12px;
+
+    --header-height: 96px;
+    --footer-height: 160px;
+    --sideNav-width: 300px;
+}
+
+html {
+    --shadowElevation_0: 0 0.9px 1.4px hsla(0, 0%, 0%, 0.12);
+    --shadowElevation_1: 0 1.2px 1.9px hsla(0, 0%, 0%, 0.12);
+    --shadowElevation_2: 0 1.9px 2.6px hsla(0, 0%, 0%, 0.12);
+    --shadowElevation_3: 0 2px 4px hsla(0, 0%, 0%, 0.12);
+    --shadowElevation_4: 0 3px 6px hsla(0, 0%, 0%, 0.12);
+    --shadowElevation_5: 0 4px 8px hsla(0, 0%, 0%, 0.12);
+
+    --shadow-00: var(--shadowElevation_0);
+    --shadow-05: var(--shadowElevation_1);
+    --shadow-10: var(--shadowElevation_2);
+    --shadow-20: var(--shadowElevation_3);
+    --shadow-30: var(--shadowElevation_4);
+    --shadow-40: var(--shadowElevation_5);
+
+    --interaction-shadow: 2px 2px 1px 0px hsla(0, 0, 0, 0.3);
+    --interaction-shadow-hover: 2px 2px 1px 0px hsla(0, 0, 0, 0.4);
+
+    --filter-brightness: 1;
+    --filter-blur: 5px;
+
+    --color-accent-h: 7;
+    --color-accent-s: 74%;
+    --color-accent-l: 45%;
+    --color-accent-l-offset: 15%;
+    --color-accent-l-multiplier: -1;
+
+    --color-white: hsl(180, 3%, 98%);
+    --color-black: hsl(180, 3%, 5%);
+
+    --color-accent-00: hsl(var(--color-accent-h),
+            var(--color-accent-s),
+            calc(var(--color-accent-l) + var(--color-accent-l-offset) * -1 * var(--color-accent-l-multiplier)));
+    --color-accent-10: hsl(var(--color-accent-h),
+            var(--color-accent-s),
+            calc(var(--color-accent-l) + 0%));
+    --color-accent-20: hsl(var(--color-accent-h),
+            var(--color-accent-s),
+            calc(var(--color-accent-l) + var(--color-accent-l-offset) * var(--color-accent-l-multiplier)));
+
+    --bg-color-h: 125;
+    --bg-color-s: 42%;
+    --bg-color-l: 98%;
+    --bg-color-multiplier: -1;
+
+    --bg-color-00: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(0% * var(--bg-color-multiplier))));
+
+    --bg-color-05: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(3% * var(--bg-color-multiplier))));
+
+    --bg-color-translucent-05: hsla(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(3% * var(--bg-color-multiplier))), 0.8);
+
+    --bg-color-10: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(5% * var(--bg-color-multiplier))));
+
+    --bg-color-translucent-10: hsla(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(5% * var(--bg-color-multiplier))), 0.8);
+
+    --bg-color-15: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(7% * var(--bg-color-multiplier))));
+
+    --bg-color-translucent-15: hsla(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(7% * var(--bg-color-multiplier))), 0.8);
+
+    --bg-color-20: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(9% * var(--bg-color-multiplier))));
+
+    --bg-color-25: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(11% * var(--bg-color-multiplier))));
+
+    --bg-color-30: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(13% * var(--bg-color-multiplier))));
+
+    --bg-color-40: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(18% * var(--bg-color-multiplier))));
+
+    --bg-color-45: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(22% * var(--bg-color-multiplier))));
+
+    --bg-color-50: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(25% * var(--bg-color-multiplier))));
+
+    --bg-color-60: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(30% * var(--bg-color-multiplier))));
+
+    --bg-color-65: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(35% * var(--bg-color-multiplier))));
+
+    --bg-color-70: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(40% * var(--bg-color-multiplier))));
+
+    --bg-color-80: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(70% * var(--bg-color-multiplier))));
+
+    --bg-color-90: hsl(var(--bg-color-h),
+            var(--bg-color-s),
+            calc(var(--bg-color-l) + calc(95% * var(--bg-color-multiplier))));
+
+    --border-color: var(--bg-color-65);
+    --border-light-color: var(--bg-color-45);
+    --border-dark-color: var(--bg-color-80);
+
+    --border: 1px solid var(--border-color);
+    --border-light: 1px solid var(--border-light-color);
+    --border-dark: 1px solid var(--border-dark-color);
+
+    --button-border-color: var(--border-light-color);
+    --button-hover-border-color: var(--border-color);
+    --button-disabled-border-color: var(--border-dark-color);
+
+    --button-border: 1px solid var(--button-border-color);
+    --button-hover-border: 1px solid var(--button-hover-border-color);
+    --button-disabled-border: 1px solid var(--button-disabled-border-color);
+
+    --button-background-color: var(--bg-primary);
+    --button-hover-background-color: var(--bg-secondary);
+    --button-disabled-background-color: var(--bg-tertiary);
+
+    --bg-primary: var(--bg-color-00);
+    --bg-secondary: var(--bg-color-05);
+    --bg-tertiary: var(--bg-color-10);
+
+    --bg-primary-translucent: var(--bg-color-translucent-00);
+    --bg-secondary-translucent: var(--bg-color-translucent-05);
+    --bg-tertiary-translucent: var(--bg-color-translucent-10);
+
+    --bg-primary-hover: var(--bg-color-05);
+    --bg-secondary-hover: var(--bg-color-10);
+    --bg-tertiary-hover: var(--bg-color-15);
+
+    --bg-primary-translucent-hover: var(--bg-color-translucent-05);
+    --bg-secondary-translucent-hover: var(--bg-color-translucent-10);
+    --bg-tertiary-translucent-hover: var(--bg-color-translucent-15);
+
+    --text-color: var(--bg-color-90);
+    --text-faint-color: var(--bg-color-60);
+    --text-muted-color: var(--bg-color-40);
+    --text-disabled-color: var(--bg-color-20);
+}
+
+html.dark {
+    --bg-color-l: 5% !important;
+    --bg-color-multiplier: 1 !important;
+    --color-accent-l-multiplier: 1 !important;
+    --color-accent-s: 52% !important;
+    --filter-brightness: 0.4 !important;
+}
